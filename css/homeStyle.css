@@ -1,0 +1,124 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    font-family: "Hiragino Sans GB","华文细黑","STHeiti","微软雅黑","Microsoft YaHei",SimHei,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.page_section{
+    width: 100%;
+}
+
+#welcom_page{
+    background-image: url(http://www.mshackathon.nl/wp-content/uploads/2016/02/jobs-hero-1-1440-900.jpg);
+    background-position: center center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    height: 600px;
+}
+
+#logo{
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.nav{
+    color: #fff;
+    line-height: 61px;
+    font-size: 14px;
+    display: inline-block;
+    display: block;
+    float: right;
+    padding: 0 19px;
+}
+
+#nav_wrapper{
+    position: absolute;
+    top:0;
+    right: 0;
+}
+
+#beTeacher{
+    font-weight: normal;
+    border-radius: 2px;
+    border: 2px solid #fff;
+    padding: 6px 20px;
+}
+#slogan{
+    position: relative;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    text-align: center;
+    color: white;
+}
+#slogan_title{
+    font-size: 65px;
+    font-weight: 100;
+    margin: 0;
+}
+
+#slogan_subtitle{
+    font-size: 22px;
+    font-weight: 100;
+    margin: 3px 0;
+}
+
+#start_class_button{
+    background: rgba(255,255,255,0.5);
+    border-style: none;
+    color: #fff;
+    padding: 9px 22px;
+    font-size: 16px;
+    margin: 15px 0;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#search_form{
+    background-color: rgba(0,0,0,0.6);
+    padding-bottom: 30px;
+    padding-top: 30px;
+    position: relative;
+    top: 305px;
+}
+
+#search_bar{
+    position: relative;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#select_category,#learn_what,#go_search{
+    height: 44px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: inherit;
+    box-shadow: none;
+    border: none;
+}
+
+#select_category{
+    -webkit-appearance: none;
+    padding:10px;
+    border-radius: 8px;
+    padding-left: 12px;
+    width: 100px;
+}
+
+#learn_what{
+    width: 530px;
+    padding:10px;
+    margin-left: 10px;
+}
+
+#go_search{
+    background-color: #ff5a5f;
+    color: #fff;
+    padding: 9px 27px;
+    font-weight: bold;
+    border-radius: 0 2px 2px 0;
+    margin-top: -4px;
+    margin-left: -4px;
+}
