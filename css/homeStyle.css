@@ -172,7 +172,7 @@ html,body{
 }
 
 #pic_section{
-    background-image: url(../pic/draw.jpg);
+    background-image: url(../pic/drawer.jpg);
     background-position:center -256px;
     /*background-position: center center;*/
     background-repeat: no-repeat; 
