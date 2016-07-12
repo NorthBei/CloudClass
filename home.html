@@ -2,44 +2,91 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="css/homeStyle.css">
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<!--Add the new slick-theme.css if you want the default styling-->
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.slide_box').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+    });
+  </script>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
   <title>Home</title>
 </head>
 <body>
-   <section class="page_section" id="welcom_page">
-     <img src="" alt="pic/cloudclass.png" id="logo">
-     <div id="nav_wrapper">
-        <span class="nav">登入</span>
-        <span class="nav">註冊</span>
-        <span class="nav">幫助</span>
-        <div class="nav">
-          <span id="beTeacher">成為老師</span>
+  <section class="page_section" id="welcom_page_section">
+    <img src="" alt="pic/cloudclass.png" id="logo">
+    <div id="nav_wrapper">
+      <span class="nav">登入</span>
+      <span class="nav">註冊</span>
+      <span class="nav">幫助</span>
+      <span class="nav">
+        <span id="beTeacher">成為老師</span>
+      </span>
+    </div>
+    <div id="slogan">
+      <h1 id="slogan_title">直播教室</h1>
+      <h2 id="slogan_subtitle">讓你在即時互動中學習</h2>
+      <a id="start_class_button">開始上課</a>
+    </div>
+    <div id="search_form">
+      <div id="search_bar">
+        <form action="">
+          <select name="x" id="select_category">
+            <option value="1">全部</option>
+            <option value="1">吉他</option>
+          </select>
+          <input type="text" placeholder="想學什麼?" id="learn_what">
+          <button type="submit" id="go_search">
+            <span>搜尋</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section class="page_section" id="slide_page">
+    <center>
+      <h2 id="slide_title">在家輕鬆上課</h2>
+      <h3 id="slide_subtitle">多樣化的課程，學你想學的</h3>
+      <div class="slide_box">
+        <div class="slide_content">
+          <img  class="slide_img" src="http://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg" alt="">
         </div>
-     </div>
-     <div id="slogan">
-       <h1 id="slogan_title">直播教室</h1>
-       <h2 id="slogan_subtitle">讓你在即時互動中學習</h2>
-       <a id="start_class_button">開始上課</a>
-     </div>
-     <div id="search_form">
-       <div id="search_bar">
-         <form action="">
-           <select name="x" id="select_category">
-             <option value="1">全部</option>
-             <option value="1">吉他</option>
-           </select>
-           <input type="text" placeholder="想學什麼?" id="learn_what">
-           <button type="submit" id="go_search">
-             <span>搜尋</span>
-           </button>
-         </form>
-       </div>
-     </div>
-   </section>
-   <section class="page_section"></section>
-   <section class="page_section"></section>
-   <section class="page_section"></section>
-   <section class="page_section"></section>
+        <div class="slide_content">
+          <img class="slide_img" src="http://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg" alt="">
+        </div>
+        <div><img class="slide_img" src="http://pic.pimg.tw/izayoi617/1375105282-3631610619_n.jpg" alt=""></div>
+        <div><img class="slide_img" src="http://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg" alt=""></div>
+        <div><img class="slide_img" src="http://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg" alt=""></div>
+        <div><img class="slide_img" src="http://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg" alt=""></div>
+      </div>
+
+      <a href="" id="all_class">查看全部課程</a>
+    </center>
+   
+  </section>
+  <section class="page_section" id="pic_section"></section>
+  <section class="page_section" id="advantage_section">
+    <div id="list_wrapper">
+      <div>
+        <img src="" alt="">
+        <h2></h2>
+        <h6></h6>
+      </div>
+    </div>
+  </section>
+  <section class="page_section" id="about_company_section">
+    <center>
+      <div id="copyright">© Copyright by FunHouse, Inc.</div>
+    </center>
+  </section>
 </body>
 </html>

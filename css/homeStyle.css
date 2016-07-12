@@ -1,13 +1,14 @@
 html,body{
     margin: 0;
     padding: 0;
-    font-family: "Hiragino Sans GB","华文细黑","STHeiti","微软雅黑","Microsoft YaHei",SimHei,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    /*font-family: "Hiragino Sans GB","华文细黑","STHeiti","微软雅黑","Microsoft YaHei",SimHei,"Helvetica Neue",Helvetica,Arial,sans-serif;*/
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 .page_section{
     width: 100%;
 }
 
-#welcom_page{
+#welcom_page_section{
     background-image: url(http://www.mshackathon.nl/wp-content/uploads/2016/02/jobs-hero-1-1440-900.jpg);
     background-position: center center;
     background-repeat: no-repeat; 
@@ -25,7 +26,6 @@ html,body{
     color: #fff;
     line-height: 61px;
     font-size: 14px;
-    display: inline-block;
     display: block;
     float: right;
     padding: 0 19px;
@@ -80,7 +80,7 @@ html,body{
     padding-bottom: 30px;
     padding-top: 30px;
     position: relative;
-    top: 305px;
+    top: 286px;
 }
 
 #search_bar{
@@ -119,6 +119,83 @@ html,body{
     padding: 9px 27px;
     font-weight: bold;
     border-radius: 0 2px 2px 0;
-    margin-top: -4px;
+    vertical-align: bottom;
     margin-left: -4px;
+    font-weight: 100;
+}
+
+#slide_page{
+    background-color: #edefec;
+}
+
+#slide_title,#slide_subtitle{
+    margin: 0;
+    color: #494949;
+}
+
+#slide_title{
+    font-size: 40px;
+    font-weight: 400;
+    padding: 45px 0 0;
+}
+
+#slide_subtitle{
+    font-size: 17px;
+    font-weight: 100;
+    margin-bottom: 50px;
+}
+
+.slide_box{
+    width: 90%; 
+}
+
+.slide_content{
+    height: 400px;
+}
+
+.slide_img{
+    width: 335px;
+    max-height: 400px;
+}
+
+#all_class{
+    text-decoration: none;
+    color: #494949;
+    border: 1px solid  #cecdcd;
+    background-color: #ffffff;
+    display: inline-block;
+    padding: 7px 20px;
+    margin: 15px 0;
+    font-size: 17px;
+    margin: 55px 0 45px;
+    border-radius: 2px;
+}
+
+#pic_section{
+    background-image: url(https://i.ytimg.com/vi/GbBdx9uwe4o/maxresdefault.jpg);
+    /*background-position: center center;*/
+    background-position: top center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    height: 450px;
+}
+
+#advantage_section{
+    background-color: #fee5dd;
+    height: 500px;
+}
+
+#list_wrapper{
+    display: flex;
+}
+
+
+#about_company_section{
+    background-color: #2c2d2f;
+    color:white;
+}
+
+#copyright{
+    padding: 18px 0;
+    font-size: 15px;
 }
