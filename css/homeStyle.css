@@ -9,7 +9,7 @@ html,body{
 }
 
 #welcom_page_section{
-    background-image: url(http://www.mshackathon.nl/wp-content/uploads/2016/02/jobs-hero-1-1440-900.jpg);
+    background-image: url("../pic/Group 6.png");
     background-position: center center;
     background-repeat: no-repeat; 
     background-size: cover;
@@ -172,12 +172,12 @@ html,body{
 }
 
 #pic_section{
-    background-image: url(https://i.ytimg.com/vi/GbBdx9uwe4o/maxresdefault.jpg);
+    background-image: url(../pic/draw.jpg);
+    background-position:center -256px;
     /*background-position: center center;*/
-    background-position: top center;
     background-repeat: no-repeat; 
     background-size: cover;
-    height: 450px;
+    height: 500px;
 }
 
 #advantage_section{
@@ -185,8 +185,37 @@ html,body{
     height: 500px;
 }
 
+.entity{
+    margin: 0 45px;
+}
+
+.entity-img{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.entity-title,.entity-content{
+    text-align: center;
+    font-weight: 100;
+}
+
+.entity-title{
+    font-size: 30px;
+    margin: 10px 0 0;
+}
+
+.entity-content{
+    margin: 10px 0 0;
+}
+
 #list_wrapper{
     display: flex;
+    flex-direction:row;
+    justify-content:center;
+    color: #4A4A4A;
+    align-items:center;
+    height: inherit;
 }
 
 

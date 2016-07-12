@@ -1,0 +1,27 @@
+#logo{
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.nav{
+    color: #fff;
+    line-height: 61px;
+    font-size: 14px;
+    display: block;
+    float: right;
+    padding: 0 19px;
+}
+
+#nav_wrapper{
+    position: absolute;
+    top:0;
+    right: 0;
+}
+
+#beTeacher{
+    font-weight: normal;
+    border-radius: 2px;
+    border: 2px solid #fff;
+    padding: 6px 20px;
+}
