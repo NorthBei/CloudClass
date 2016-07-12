@@ -1,3 +1,20 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    /*font-family: "Hiragino Sans GB","华文细黑","STHeiti","微软雅黑","Microsoft YaHei",SimHei,"Helvetica Neue",Helvetica,Arial,sans-serif;*/
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 100;
+    color: #4A4A4A;
+}
+
+.page_section{
+    width: 100%;
+}
+
+#header{
+    height: 60px;
+}
+
 #logo{
     position: absolute;
     top:0;
@@ -5,7 +22,6 @@
 }
 
 .nav{
-    color: #fff;
     line-height: 61px;
     font-size: 14px;
     display: block;
@@ -22,6 +38,216 @@
 #beTeacher{
     font-weight: normal;
     border-radius: 2px;
-    border: 2px solid #fff;
+    border: 2px solid #4A4A4A;
     padding: 6px 20px;
+}
+
+#pic_section{
+    background-image: url(../pic/building-joy-planning-plans.jpg);
+    background-position:center -211px;
+    /*background-position: center center;*/
+    background-repeat: no-repeat; 
+    background-size: cover;
+    height: 270px;
+    color: white;
+}
+
+#center{
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+#slide_title,#slide_subtitle{
+    font-weight: normal;
+    margin: 0;
+}
+
+slide_title{
+    font-size: 56px;
+}
+
+#slide_subtitle{
+    font-size: 21px;
+}
+
+#class_section{
+    background-color:#EDEFEC;
+}
+
+#category_list{
+    color: #4A4A4A;
+    display: table;
+    margin: 0 auto;
+    padding-top: 26px;
+}
+
+#category_list li{
+    float: left;
+    list-style-type:none;
+    font-size: 18px;
+}
+
+
+#category_list a{
+    text-decoration: none;
+    color: #4A4A4A;
+    display: inline-block;
+    margin: 0 11px;
+}
+
+#subjcet,#class_num{
+    font-weight: normal;
+    margin: 0;
+}
+
+#subjcet{
+    font-size: 36px;
+    margin-top: 40px;
+}
+#class_num{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#classes_row{
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+    margin-bottom: 90px;
+}
+
+.slide_content{
+    margin: 0px 30px;
+}
+
+.wrapper{
+    position: relative;
+    width: 300px;
+}
+
+.price_wrapper{
+    position: absolute;
+    top: 148px;
+    background-color: #4d4c4a;
+    color: white;
+    height: 45px;
+    padding: 0 10px;
+}
+
+.cost_icon,.NTD{
+    vertical-align: bottom;
+}
+
+.price{
+    position: relative;
+    top: 6px;
+    margin-left: 18px;
+    margin-right: 5px;
+    font-size: 32px;
+}
+
+.two-col{
+    display: flex;
+    width: 100%;
+}
+.face-img{
+    height: 67px;
+    position: relative;
+    top: -31px;
+    right: -13px;
+}
+
+.img_intro{
+    margin-top: 15px;
+    font-size: 22px;
+    white-space:pre-wrap; 
+}
+
+#all_class{
+    text-decoration: none;
+    color: #494949;
+    border: 1px solid  #C8C8C8;
+    background-color: rgba(255,255,255,0.3);
+    display: inline-block;
+    padding: 7px 20px;
+    margin: 15px 0;
+    font-size: 17px;
+    margin: 55px 0 45px;
+    border-radius: 2px;
+}
+
+#search_section{
+    background-color: rgba(0,0,0,0.6);
+}
+
+#search_others{
+    width: 300px;
+    margin: 0px auto;
+    color: white;
+    font-size: 37px;
+    font-weight: normal;
+    text-align: center;
+    padding-top: 31px;
+}
+
+#search_form{
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+#search_bar{
+    position: relative;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#select_category,#learn_what,#go_search{
+    height: 44px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: inherit;
+    box-shadow: none;
+    border: none;
+}
+
+#select_category{
+    /*Remove original arrows*/
+    -webkit-appearance: none;
+    padding:10px;
+    border-radius: 8px;
+    padding-left: 12px;
+    width: 100px;
+    /*Use png at assets/selectArrow.png for the arrow on the right
+    Set the background color to a BadAss Green color */
+    background: url(../pic/select_arrow.png) no-repeat right white;
+    background-position-x: 72px;
+}
+
+#learn_what{
+    width: 530px;
+    padding:10px;
+    margin-left: 10px;
+}
+
+#go_search{
+    background-color: #ff5a5f;
+    color: #fff;
+    padding: 9px 27px;
+    font-weight: bold;
+    border-radius: 0 2px 2px 0;
+    vertical-align: bottom;
+    margin-left: -4px;
+    font-weight: 100;
+}
+
+#about_company_section{
+    background-color: #2c2d2f;
+    color:white;
+}
+
+#copyright{
+    padding: 18px 0;
+    font-size: 15px;
 }
