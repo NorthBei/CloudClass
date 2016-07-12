@@ -100,11 +100,16 @@ html,body{
 }
 
 #select_category{
+    /*Remove original arrows*/
     -webkit-appearance: none;
     padding:10px;
     border-radius: 8px;
     padding-left: 12px;
     width: 100px;
+    /*Use png at assets/selectArrow.png for the arrow on the right
+    Set the background color to a BadAss Green color */
+    background: url(../pic/select_arrow.png) no-repeat right white;
+    background-position-x: 72px;
 }
 
 #learn_what{
@@ -146,16 +151,50 @@ html,body{
 }
 
 .slide_box{
-    width: 90%; 
+    width: 90%;
 }
 
-.slide_content{
-    height: 400px;
+
+.wrapper{
+    position: relative;
+    width: inherit;
+}
+
+.slide_img_intro{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+    width: 50%;
+    color: white;
+    font-size: 30px;
 }
 
 .slide_img{
-    width: 335px;
-    max-height: 400px;
+    width: 90%;
+}
+
+.price_wrapper{
+    position: absolute;
+    bottom: 48px;
+    left: 5%;
+    background-color: #4d4c4a;
+    color: white;
+    height: 45px;
+    padding: 0 10px;
+}
+
+.cost_icon,.NTD{
+    vertical-align: bottom;
+}
+
+.price{
+    position: relative;
+    top: 6px;
+    margin-left: 18px;
+    margin-right: 5px;
+    font-size: 32px;
 }
 
 #all_class{
@@ -183,6 +222,21 @@ html,body{
 #advantage_section{
     background-color: #fee5dd;
     height: 500px;
+}
+
+#left_arrow,#right_arrow{
+    position: absolute;
+    top: 50%;
+    display: block;
+    transform: translateY(-50%);
+}
+
+#left_arrow{
+    left: -35px;
+}
+
+#right_arrow{
+    right:-35px;
 }
 
 .entity{
