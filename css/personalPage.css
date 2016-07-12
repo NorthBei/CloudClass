@@ -1,0 +1,176 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    /*font-family: "Hiragino Sans GB","华文细黑","STHeiti","微软雅黑","Microsoft YaHei",SimHei,"Helvetica Neue",Helvetica,Arial,sans-serif;*/
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 100;
+    color: #4A4A4A;
+}
+
+.page_section{
+    width: 100%;
+}
+
+#header{
+    height: 60px;
+}
+
+#logo{
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.nav{
+    line-height: 61px;
+    font-size: 14px;
+    display: block;
+    float: right;
+    padding: 0 19px;
+}
+
+#nav_wrapper{
+    position: absolute;
+    top:0;
+    right: 0;
+}
+
+#face-pic{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+#menu_page{
+    background-color: #525252;
+    height: 40px;
+}
+
+#link_wrapper>a{
+    text-decoration: none;
+    color: white;
+    margin: 0 18px;
+    line-height: 40px;
+    /*line-height同高度*/
+}
+
+#link_wrapper{
+    display: flex;
+    flex-direction:row;
+    justify-content:left;
+    padding-left: 150px;
+}
+
+#pesonal_infro{
+    
+}
+
+#infor_wrapper{
+    display: flex;
+    margin: 70px;
+    margin-left: 156px;
+}
+
+#profile_picture{
+    height: 154px;
+    width: 154px;
+    border-radius: 100%;
+    margin-right: 45px;
+}
+
+#infor_name,#infor_email{
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 12px;
+}
+
+#infor_email{
+    font-size: 15px;
+}
+
+#infor_edit{
+    text-decoration: none;
+    color: white;
+    background-color: #F5A623;
+    border: 1px solid #DF951A;
+    border-radius: 6px;
+    padding: 5px 15px;
+    vertical-align: top;
+    display: inline-block;
+    font-weight: normal;
+}
+
+#pic_section{
+    background-image: url(../pic/drawer.jpg);
+    background-position:center -256px;
+    /*background-position: center center;*/
+    background-repeat: no-repeat; 
+    background-size: cover;
+    height: 500px;
+}
+
+#advantage_section{
+    background-color: #fee5dd;
+    height: 500px;
+}
+
+#left_arrow,#right_arrow{
+    position: absolute;
+    top: 50%;
+    display: block;
+    transform: translateY(-50%);
+}
+
+#left_arrow{
+    left: -35px;
+}
+
+#right_arrow{
+    right:-35px;
+}
+
+.entity{
+    margin: 0 45px;
+}
+
+.entity-img{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.entity-title,.entity-content{
+    text-align: center;
+    font-weight: 100;
+}
+
+.entity-title{
+    font-size: 30px;
+    margin: 10px 0 0;
+}
+
+.entity-content{
+    margin: 10px 0 0;
+}
+
+#list_wrapper{
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+    color: #4A4A4A;
+    align-items:center;
+    height: inherit;
+}
+
+
+#about_company_section{
+    background-color: #2c2d2f;
+    color:white;
+}
+
+#copyright{
+    padding: 18px 0;
+    font-size: 15px;
+}
