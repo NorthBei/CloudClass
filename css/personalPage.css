@@ -172,6 +172,19 @@ html,body{
     color:white;
 }
 
+#about_link_wrapper{
+    display: flex;
+    justify-content: center;
+    padding: 40px 0 18px;
+}
+
+.about_link{
+    text-decoration: none;
+    color:white;
+    margin: 0 20px;
+    font-size: 18px;
+}
+
 #copyright{
     padding: 18px 0;
     font-size: 15px;

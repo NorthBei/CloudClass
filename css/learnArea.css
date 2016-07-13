@@ -43,6 +43,26 @@ html,body{
     padding: 6px 20px;
 }
 
+#menu_page{
+    background-color: #525252;
+    height: 40px;
+}
+
+#link_wrapper>a{
+    text-decoration: none;
+    color: white;
+    margin: 0 18px;
+    line-height: 40px;
+    /*line-height同高度*/
+}
+
+#link_wrapper{
+    display: flex;
+    flex-direction:row;
+    justify-content:left;
+    padding-left: 150px;
+}
+
 #pic_section{
     background-image: url(../pic/building-joy-planning-plans.jpg);
     background-position:center -211px;
@@ -174,8 +194,9 @@ html,body{
     background-color: rgba(255,255,255,0.3);
     display: inline-block;
     padding: 7px 20px;
+    margin: 15px 0;
     font-size: 17px;
-    margin-bottom: 90px;
+    margin: 55px 0 45px;
     border-radius: 2px;
 }
 
