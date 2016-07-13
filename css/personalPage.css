@@ -17,8 +17,9 @@ html,body{
 
 #logo{
     position: absolute;
-    top:0;
-    left: 0;
+    top: 16px;
+    left: 35px;
+    height: 34px;
 }
 
 .nav{
@@ -96,10 +97,11 @@ html,body{
     background-color: #F5A623;
     border: 1px solid #DF951A;
     border-radius: 6px;
-    padding: 5px 15px;
+    padding: 3px 15px;
     vertical-align: top;
     display: inline-block;
     font-weight: normal;
+    margin-top: 6px;
 }
 
 #pic_section{
