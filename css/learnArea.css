@@ -39,11 +39,12 @@ html,body{
     right: 0;
 }
 
-#beTeacher{
-    font-weight: normal;
-    border-radius: 2px;
-    border: 2px solid #4A4A4A;
-    padding: 6px 20px;
+#face-pic{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    vertical-align: middle;
+    margin-left: 10px;
 }
 
 #menu_page{
@@ -67,78 +68,72 @@ html,body{
 }
 
 #pic_section{
-    background-image: url(../pic/building-joy-planning-plans.jpg);
+    background-image: url(../pic/building-joy-planning-plans.png);
     background-position:center -211px;
     /*background-position: center center;*/
     background-repeat: no-repeat; 
     background-size: cover;
-    height: 270px;
+    height: 205px;
     color: white;
 }
 
-#center{
-    position: relative;
-    top:50%;
-    transform: translateY(-50%);
+#right,#into_classroom{
+    float: right;
 }
 
-#slide_title,#slide_subtitle{
+#right{
+    margin-right: 60px;
+    margin-top: 51px;
+}
+
+#slogan_title{
     font-weight: normal;
     margin: 0;
+    font-size: 46px;
+    color: #4A90E2;
 }
 
-#slide_title{
-    font-size: 56px;
-}
-
-#slide_subtitle{
-    font-size: 21px;
+#into_classroom{
+    text-decoration: none;
+    padding: 5px 25px;
+    background-color: #4A90E2;
+    color: white;
+    border-radius: 5px;
+    margin-right: 26px;
+    margin-top: 14px;
 }
 
 #class_section{
     background-color:#EDEFEC;
 }
 
-#category_list{
-    color: #4A4A4A;
-    display: table;
-    margin: 0 auto;
-    padding-top: 26px;
+.time{
+    padding: 50px 0;
 }
 
-#category_list li{
-    float: left;
-    list-style-type:none;
-    font-size: 18px;
-}
-
-
-#category_list a{
-    text-decoration: none;
-    color: #4A4A4A;
-    display: inline-block;
-    margin: 0 11px;
-}
-
-#subjcet,#class_num{
-    font-weight: normal;
+.month,.year{
+    /*font-weight: normal;*/
     margin: 0;
+    display: inline-block;
 }
 
-#subjcet{
+.month{
     font-size: 36px;
-    margin-top: 40px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
-#class_num{
+.year{
     font-size: 16px;
-    margin-bottom: 20px;
+    float: right;
+    margin-right: calc((100% - 350px * 3)/2);
 }
 
-#classes_row{
+.classes_row{
     display: flex;
     flex-direction:row;
     justify-content:center;
-    margin-bottom: 90px;
+    padding-bottom: 90px;
 }
 
 .slide_content{
@@ -148,6 +143,23 @@ html,body{
 .wrapper{
     position: relative;
     width: 320px;
+}
+
+.triangle{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 70px 70px 0 0;
+    border-color: #f5a423 transparent transparent transparent;
+}
+
+.triangle_content{
+    position: absolute;
+    color: white;
+    transform: rotate(-45deg);
+    top: 15px;
+    left: 4px
 }
 
 .price_wrapper{
@@ -201,71 +213,6 @@ html,body{
     font-size: 17px;
     margin: 55px 0 45px;
     border-radius: 2px;
-}
-
-#search_section{
-    background-color: rgba(0,0,0,0.6);
-}
-
-#search_others{
-    width: 300px;
-    margin: 0px auto;
-    color: white;
-    font-size: 37px;
-    font-weight: normal;
-    text-align: center;
-    padding-top: 31px;
-}
-
-#search_form{
-    padding-bottom: 30px;
-    padding-top: 30px;
-}
-
-#search_bar{
-    position: relative;
-    text-align: center;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-#select_category,#learn_what,#go_search{
-    height: 44px;
-    box-sizing: border-box;
-    font-size: 16px;
-    font-family: inherit;
-    box-shadow: none;
-    border: none;
-}
-
-#select_category{
-    /*Remove original arrows*/
-    -webkit-appearance: none;
-    padding:10px;
-    border-radius: 8px;
-    padding-left: 12px;
-    width: 100px;
-    /*Use png at assets/selectArrow.png for the arrow on the right
-    Set the background color to a BadAss Green color */
-    background: url(../pic/select_arrow.png) no-repeat right white;
-    background-position-x: 72px;
-}
-
-#learn_what{
-    width: 530px;
-    padding:10px;
-    margin-left: 10px;
-}
-
-#go_search{
-    background-color: #ff5a5f;
-    color: #fff;
-    padding: 9px 27px;
-    font-weight: bold;
-    border-radius: 0 2px 2px 0;
-    vertical-align: bottom;
-    margin-left: -4px;
-    font-weight: 100;
 }
 
 #about_company_section{
