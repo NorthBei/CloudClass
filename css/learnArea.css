@@ -11,7 +11,7 @@ html,body{
 }
 
 .page_section{
-    width: 100%;
+    min-width: 100%;
 }
 
 #header{
@@ -77,13 +77,10 @@ html,body{
     color: white;
 }
 
-#right,#into_classroom{
-    float: right;
-}
-
 #right{
     margin-right: 60px;
     margin-top: 51px;
+    float: right;
 }
 
 #slogan_title{
@@ -93,21 +90,42 @@ html,body{
     color: #4A90E2;
 }
 
-#into_classroom{
-    text-decoration: none;
-    padding: 5px 25px;
-    background-color: #4A90E2;
-    color: white;
-    border-radius: 5px;
-    margin-right: 26px;
-    margin-top: 14px;
+#countdown_time{
+    padding-left: 20px;
 }
+
+#slogan_subtitle{
+    color: #4A90E2;
+    float: right;
+    margin: 0;
+    font-size: 20px;
+    margin-right: 45px;
+    font-weight: normal;
+}
+
+#creat_class_wrapper{
+    height: 0;
+}
+
+#creat_class{
+    background-color: #F5A623;
+    text-decoration: none;
+    color: white;
+    margin-left: calc((100% - 350px * 3)/2);
+    font-size: 21px;
+    padding: 14px 51px;
+    border-radius: 5px;
+    font-weight: normal;
+    position: relative;
+    top: 58px;
+    left: -15px;
+} 
 
 #class_section{
     background-color:#EDEFEC;
 }
 
-.time{
+.time_wrapper{
     padding: 50px 0;
 }
 
