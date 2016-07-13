@@ -123,7 +123,7 @@ html,body{
 
 .wrapper{
     position: relative;
-    width: 300px;
+    width: 320px;
 }
 
 .price_wrapper{
@@ -155,7 +155,9 @@ html,body{
     height: 67px;
     position: relative;
     top: -31px;
-    right: -13px;
+    right: 7px;
+    border-radius: 100%;
+    margin-left: 10px;
 }
 
 .img_intro{
