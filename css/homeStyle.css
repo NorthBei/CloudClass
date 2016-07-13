@@ -85,8 +85,9 @@ html,body{
     background-color: rgba(0,0,0,0.6);
     padding-bottom: 30px;
     padding-top: 30px;
-    position: relative;
-    top: 286px;
+    position: absolute;
+    top: 496px;
+    width: 100%;
 }
 
 #search_bar{
