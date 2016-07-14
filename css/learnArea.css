@@ -67,6 +67,15 @@ html,body{
     padding-left: 150px;
 }
 
+.now_flag{
+    background-color: white;
+    height: 5px;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    top: -25px;
+}
+
 #pic_section{
     background-image: url(../pic/building-joy-planning-plans.png);
     background-position:center -211px;
