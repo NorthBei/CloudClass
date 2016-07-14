@@ -151,10 +151,12 @@ cite{
 
 .category_tag{
     color: #999999;
-    padding: 3px 11px;
+    padding: 0px 11px;
     border: 2px solid #999999;
     border-radius: 5px;
     margin: 0 5px;
+    font-size: 18px;
+    text-decoration: none;
 }
 
 #applied_num{
