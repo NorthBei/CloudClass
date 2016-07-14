@@ -380,17 +380,6 @@ cite{
     font-size: 20px;
 }
 
-.message_like{
-    float: right;
-    border: 1px solid #999999;
-    padding: 3px 15px;
-    border-radius: 4px;
-    font-size: 17px;
-}
-.like_button{
-    height: 15px;
-}
-
 .split_line{
     border:0;
     width: 100%;
