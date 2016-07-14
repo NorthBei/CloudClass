@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="css/classPage.css">
+  <link rel="stylesheet" type="text/css" href="css/teacherPage.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-  <title>課堂頁-大眾</title>
+  <title>教師個人牆</title>
 </head>
 <body>
   <header class="page_section" id="header">
@@ -31,98 +31,17 @@
   </section>
 
   <section class="page_section" id="pic_section">
-    <div id="teacher_button_wrapper">
-      <span class="teacher_button">編輯</span>
-      <span class="teacher_button">取消</span>
-      <span class="teacher_button">預覽</span>
-    </div>
+    <center id="center">
+      <h2 id="slide_title">在家輕鬆上課</h2>
+      <h3 id="slide_subtitle">讓你在即時互動中學習</h3>
+    </center>
   </section>
 
-  <section class="page_section" id="class_info">
-    <div>
-      <img id="teacher_img" src="pic/example_face_img.png" alt="大頭貼">
-      <div id="teacher_name">丁霜語</div>
-    </div>
-
-    <div id="class_data"><!--start-->
-      <div id="class_name">
-        烏克莉莉常用的18種和弦與按法
-        <img id="bookmark" src="pic/bookmark.png" alt="">
-      </div>
-      <div id="class_info_wrapper">
-          <span id="class_category">課程分類: </span>
-          <span class="category_tag">生活</span>
-          <span class="category_tag">才藝</span>
-          <span class="category_tag">影音</span>
-          <span id="applied_num">
-            已報名人數: 
-            <span id="people_num">16</span>
-            人
-          </span>
-      </div>
-    </div><!--end-->
-    <!--價格框框-->
-      <div id="price_box">
-        <div id="price_box_title">
-          上課時間：2016 / 09 / 04 (日)
-          <span id="blank"></span>
-          19:00~21:00
-        </div>
-        <div id="price_box_content">
-          <div id="content_row1">
-            本堂課為第
-            <span id="batch">1</span>
-            梯次開課
-          </div>
-          <div>
-            上課時間3小時，合計為
-            <span id="price">600</span>
-            <span id="money_type">TWD</span>
-          </div>
-          <div id="button_wrapper">
-            <div class="bottom_button" id="start_learning">開始授課</div>
-            <div class="bottom_button" id="buy">預覽結帳</div>
-          </div>
-        </div>
-      </div>
-  </section>
-
-  <section class="page_section" id="about_section">
-    
-    <article class="article">
-      <h1 class="article_title">關於課程</h1>
-      <div class="article_content">
-        <p>烏克麗麗練到一定程度以後，除了和弦刷刷刷、T12312，或看著TAB譜彈獨奏曲，是不是覺得還少了些什麼？是不是覺得「味道」跟音樂高手有相當的差距？</p>
-        <p>又或者你是其他樂器的樂手，覺得已經厭煩了看譜彈音樂，是不是覺得被束縛住，很不自由？人被譜役使，而不是人使用譜？</p>
-        <p>常常聽到資深樂手會說到一種叫作「jam」的活動，大家一起自由地快樂即興彈琴，彈出藍調濃濃的地下鄉愁，但是一看到其他樂手純熟老練的樂句，是不是心驚驚，覺得自己裹足不前？</p>
-        <p>如果你常年有以上的疑問，Ukuman學院的張六老師可以告訴大家為什麼...</p>
-      </div>
-    </article>
-
-    <article class="article">
-      <h1 class="article_title">課程影片</h1>
-      <div class="article_content">
-        <div class="video_wrapper">
-        <iframe class="video" src="https://www.youtube.com/embed/x747xuzG3Yo" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
-    </article>
-
-    <article class="article">
-      <h1 class="article_title">課程單元</h1>
-      <div class="article_content">
-        <ol id="article_content_list">
-          <li>到底「寫程式」是什麼？（估計 20 分鐘）</li>
-          <li>透過 Command line 操作學習下指令（估計 40 分鐘）</li>
-          <li>我的錢怎麼變成負的？－－電腦中的資料儲存與表示方法（估計 60 分鐘）</li>
-          <li>為什麼我連不上這個網頁－－網路基礎概論（估計 40 分鐘）</li>
-          <li>駭客是怎麼做到的？－－資料庫基礎與系統安全（估計 60 分鐘）</li>
-          <li>怎麼會有這麼多程式語言？－－程式語言基礎與簡介（估計 60 分鐘）</li>
-          <li>不過就是排序，有什麼難的？－－演算法概論（估計 40 分鐘）</li>
-          <li>邁向程式之路－－Scratch 入門教學（估計 60 分鐘）</li>
-        </ol>
-      </div>
-    </article>
+  <section class="page_section" id="select_section">
+    <select name="y" id="teacher_select">
+      <option value="1">即將上課</option>
+      <option value="1">課程紀錄</option>
+    </select>
   </section>
 
   <section  class="page_section" id="personal_info">
@@ -134,8 +53,8 @@
           <span id="info_name">丁霜語</span>
           <span id="info_email">cindy.webtvasia.tw@gamil.com</span>
           <span id="info_track">
-            <img id="track_favorite" src="pic/favorite.png" alt="">
-            已追蹤
+            <img id="track_favorite" src="pic/favorite_hollow.png" alt="">
+            追蹤開課
           </span>
           <p>烏克麗麗及古箏演奏家！<br>
   唯一烏克麗麗結合踢踏舞演奏。<br>
@@ -211,44 +130,65 @@
       </div>
   </section>
 
-  <section  class="page_section" id="messages">
-    <article class="messages_entity">
-      <div class="message_writer">
-        <img class="message_photo" src="http://static.nownews.com/newspic/1840/i1840159.jpg" alt="大頭貼">
-        <div class="message_name">舞棍阿北</div>
-      </div>
-        
+  <section class="page_section" id="class_section">
+    
+    <span id="classes_box">
       <div>
-        <div class="message_content">2010年一夕爆紅的舞棍阿伯，以其獨特作風叱吒娛樂圈，誇張的髮型與特殊曲風，讓他成為各大活動邀約對象，阿伯笑說：「自2010年後算是自己最得意的時期。」往年他都給媽媽5位數紅包，今年會加碼到六位數，他也表示：「走紅後，媽媽很開心，還說自己比我紅，因為鄰居都稱她為『星媽』。」</div>
-        <div class="message_bottom_wrapper">
-          <span class="message_date">2015年11月</span>
-          <span class="message_like">
-            <img class="like_button" src="http://pic.pimg.tw/dinosaurs/1310546606-598551aca1df6072e42242abf506b0e7.gif?v=1310546607" alt="讚">
-            有用
-            </span>
+        <div class="time_wrapper">
+          <h1 class="month">6月</h1>
+          <h5 class="year">2016</h5>
         </div>
-        <hr class="split_line">
-      </div>
-    </article>
+        <span class="classes_row">
 
-    <article class="messages_entity">
-      <div class="message_writer">
-        <img class="message_photo" src="http://static.nownews.com/newspic/1840/i1840159.jpg" alt="大頭貼">
-        <div class="message_name">舞棍阿北</div>
+          <div class="slide_content">
+            <div class="wrapper">
+              <img  class="slide_img" src="pic/ex1.png" alt="">
+              <div class="price_wrapper">
+                <span class="cost_icon">$</span>
+                <span class="price">200</span>
+                <span class="NTD">NTD</span>  
+              </div>
+              <div class="two-col">
+                <div class="img_intro">皮拉提斯運動法!一日20分鐘打造纖細身材</div>
+                <img class="face-img" src="pic/G01.png" alt="大頭貼">
+              </div>
+            </div>
+          </div>
+
+          <div class="slide_content">
+            <div class="wrapper">
+              <img  class="slide_img" src="pic/ex2.png" alt="">
+              <div class="price_wrapper">
+                <span class="cost_icon">$</span>
+                <span class="price">200</span>
+                <span class="NTD">NTD</span>  
+              </div>
+              <div class="two-col">
+                <div class="img_intro">烏克莉莉常用的18種和弦按法</div>
+                <img class="face-img" src="pic/G01.png" alt="大頭貼">
+              </div>
+            </div>
+          </div>
+
+          <div class="slide_content">
+            <div class="wrapper">
+              <img  class="slide_img" src="pic/ex3.png" alt="">
+              <div class="price_wrapper">
+                <span class="cost_icon">$</span>
+                <span class="price">200</span>
+                <span class="NTD">NTD</span>  
+              </div>
+              <div class="two-col">
+                <div class="img_intro">開發app應該先選擇iOS還是Android?</div>
+                <img class="face-img" src="pic/G01.png" alt="大頭貼">
+              </div>
+            </div>
+          </div>
+              
+        </span>
       </div>
-        
-      <div>
-        <div class="message_content">2010年一夕爆紅的舞棍阿伯，以其獨特作風叱吒娛樂圈，誇張的髮型與特殊曲風，讓他成為各大活動邀約對象，阿伯笑說：「自2010年後算是自己最得意的時期。」往年他都給媽媽5位數紅包，今年會加碼到六位數，他也表示：「走紅後，媽媽很開心，還說自己比我紅，因為鄰居都稱她為『星媽』。」</div>
-        <div class="message_bottom_wrapper">
-          <span class="message_date">2015年11月</span>
-          <span class="message_like">
-            <img class="like_button" src="http://pic.pimg.tw/dinosaurs/1310546606-598551aca1df6072e42242abf506b0e7.gif?v=1310546607" alt="讚">
-            有用
-            </span>
-        </div>
-        <hr class="split_line">
-      </div>
-    </article>
+    </span>
+
   </section>
 
   <section class="page_section" id="search_section">
