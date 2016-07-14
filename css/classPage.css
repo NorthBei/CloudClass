@@ -6,8 +6,13 @@
 html,body{
     margin: 0;
     padding: 0;
+    color: #4A4A4A;
     /*font-family: "Hiragino Sans GB","华文细黑","STHeiti","微软雅黑","Microsoft YaHei",SimHei,"Helvetica Neue",Helvetica,Arial,sans-serif;*/
     font-family: Helvetica,"Helvetica_web_font",Arial,sans-serif;
+}
+
+cite{
+    font-style: normal;
 }
 
 .page_section{
@@ -84,22 +89,37 @@ html,body{
     height: 600px;
 }
 
+#teacher_button_wrapper{
+    float: right;
+    margin: 11px;
+}
+
+.teacher_button{
+    color: white;
+    background-color: #F5A623;
+    border: 1px solid #DF951A;
+    border-radius: 6px;
+    padding: 3px 15px;
+    display: inline-block;
+    font-weight: normal;
+    margin: 7px;
+}
+
 #class_info{
     display: flex;
     align-items: center;
-    
     box-sizing: border-box;
     height: 296px;
-}
-
-#class_info,#about_class{
     padding: 50px 120px;
+    padding-right: 0;
 }
 
 #teacher_img{
     border-radius: 100%;
-    height: 154px;
-    width: 154px;
+    /*height: 154px;
+    width: 154px;*/
+    height: 120px;
+    width: 120px;
 }
 
 #teacher_name{
@@ -109,11 +129,15 @@ html,body{
 }
 
 #class_data{
-    margin-left: 90px;
+    margin-left: 75px;
 }
 
 #class_name{
-    font-size: 40px;
+    font-size: 36px;
+}
+
+#bookmark{
+    width: 20px;
 }
 
 #class_info_wrapper{
@@ -142,30 +166,124 @@ html,body{
     font-weight: bold;
 }
 
-
-
-
-
-
-
-
-
-
-
-#about_class{
-    background-color: #EDEFEC;
-    height: 800px;
-    box-sizing: border-box;
+#price_box{
+    border: 1px solid #999999;
+    position: relative;
+    top: -76px;
+    left: 45px;
+    font-size: 17px;
 }
 
-#pesonal_info{
+#price_box_title{
+    background-color: rgba(74,74,74,0.7);
+    padding: 12px 23px;
+    color: white;
     
+}
+
+#blank{
+    width: 12px;
+    display: inline-block;
+}
+
+#price_box_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px;
+}
+
+#content_row1{
+    margin-bottom: 15px;
+}
+
+#button_wrapper{
+    padding-top: 23px;
+}
+
+#batch{
+    font-size: 32px;
+}
+
+#price,#money_type{
+    color:#FF5A60; 
+    font-weight: bold;
+}
+
+#price{
+    font-size: 33px;
+}
+
+#button_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.bottom_button{
+    padding: 3px 25px;
+    margin: 0 19px;
+    border-radius: 5px;
+}
+
+#start_learning{
+    background-color:#4A90E2; 
+}
+
+#buy{
+    background-color:#FF5A60; 
+}
+
+#about_section{
+    background-color: #EDEFEC;
+    box-sizing: border-box;
+    padding: 20px 120px;
+}
+
+.article{
+     padding: 40px 0;
+}
+
+.article_title{
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.article_content{    
+    padding-left: 27px;
+    font-size: 15px;
+}
+
+#article_content_list>li{
+    margin: 12px 0;
+}
+
+.video_wrapper{
+    position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+    /*依照影片比例更改*/
+    height: 0;
+}
+.video{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+#personal_info{
+    padding: 20px 120px;
+    box-sizing: border-box;
 }
 
 #info_wrapper{
     display: flex;
     margin: 70px;
-    margin-left: 156px;
+    margin-left: 70px;
+    /*修改過margin-left: */
 }
 
 #profile_picture{
@@ -185,17 +303,105 @@ html,body{
     font-size: 15px;
 }
 
-#info_edit{
-    text-decoration: none;
-    color: white;
-    background-color: #F5A623;
-    border: 1px solid #DF951A;
-    border-radius: 6px;
+#info_track{
+    color: #999999 ;
+    border: 1px solid #999999;
+    border-radius: 2px;
     padding: 3px 15px;
     vertical-align: top;
     display: inline-block;
     font-weight: normal;
     margin-top: 6px;
+}
+
+#track_favorite{
+    vertical-align: middle;
+    margin-left: -7px;
+    margin-right: 10px;
+}
+
+#experience_works{
+    display: flex;
+}
+
+#experience,works{    
+    width: 50%;
+}
+
+.exp_year{}
+
+.exp_row{}
+
+.one_work{
+    text-decoration: none;
+    color: #4A4A4A;
+    display: block;
+    margin: 12px 0;
+}
+
+#search_section{
+    background-color: rgba(0,0,0,0.6);
+}
+
+#search_others{
+    width: 300px;
+    margin: 0px auto;
+    color: white;
+    font-size: 37px;
+    font-weight: normal;
+    text-align: center;
+    padding-top: 31px;
+}
+
+#search_form{
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+#search_bar{
+    position: relative;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#select_category,#learn_what,#go_search{
+    height: 44px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: inherit;
+    box-shadow: none;
+    border: none;
+}
+
+#select_category{
+    /*Remove original arrows*/
+    -webkit-appearance: none;
+    padding:10px;
+    border-radius: 8px;
+    padding-left: 12px;
+    width: 100px;
+    /*Use png at assets/selectArrow.png for the arrow on the right
+    Set the background color to a BadAss Green color */
+    background: url(../pic/select_arrow.png) no-repeat right white;
+    background-position-x: 72px;
+}
+
+#learn_what{
+    width: 530px;
+    padding:10px;
+    margin-left: 10px;
+}
+
+#go_search{
+    background-color: #ff5a5f;
+    color: #fff;
+    padding: 9px 27px;
+    font-weight: bold;
+    border-radius: 0 2px 2px 0;
+    vertical-align: bottom;
+    margin-left: -4px;
+    font-weight: 100;
 }
 
 #about_company_section{
