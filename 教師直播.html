@@ -2,9 +2,23 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="css/liveVideo.css">
+  <link rel="stylesheet" type="text/css" href="lib/jquery-scrollbar/style.css">
+  <link rel="stylesheet" type="text/css" href="lib/jquery-scrollbar/jquery.scrollbar.css">
+  <script type="text/javascript" src="lib/jquery-scrollbar/prettify/prettify.js"></script>
+  <script type="text/javascript" src="jquery/jquery-3.0.0.min.js"></script>
+  <script type="text/javascript" src="lib/jquery-scrollbar/jquery.scrollbar.min.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
   <title>教師直播</title>
+  <script type="text/javascript">          
+    window.addEventListener("load",function(){
+      var videoHeight =  document.getElementById("live_video").clientHeight;
+      console.log("height"+videoHeight);
+      //$('#scroll_area').scrollbar().css("height",videoHeight+"px");
+      $("#students").css("height",videoHeight+"px");
+    },false);
+</script>
+
 </head>
 <body>
   <header class="page_section" id="header">
@@ -35,14 +49,104 @@
   <section class="page_section" id="live_video_section">
     <aside id="students">
       <img id="setting_icon" src="pic/setting_icon.png" alt="">
-      <div class="scroll_area">
+      <div id="scroll_area" class="scrollbar-dynamic">
+        <div id="scroll_bar"></div>
         <div class="student_phto_wrapper">
           <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
           <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+          <div class="message_triangle"></div>
+          <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
         </div>
+
+        <div class="student_phto_wrapper">
+          <img class="student_phto" src="https://c7.staticflickr.com/4/3492/3464131894_00370eb765.jpg" alt="學生大頭貼">
+          <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+          <div class="message_triangle"></div>
+          <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+        </div>
+
+        <div class="student_phto_wrapper">
+          <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
+          <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+          <div class="message_triangle"></div>
+          <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+        </div>
+
+        <div class="student_phto_wrapper">
+          <img class="student_phto" src="https://c7.staticflickr.com/4/3492/3464131894_00370eb765.jpg" alt="學生大頭貼">
+          <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+          <div class="message_triangle"></div>
+          <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+        </div>
+
+        <div class="student_phto_wrapper">
+          <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
+          <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+          <div class="message_triangle"></div>
+          <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+        </div>
+
+        <div class="student_phto_wrapper">
+          <img class="student_phto" src="https://c7.staticflickr.com/4/3492/3464131894_00370eb765.jpg" alt="學生大頭貼">
+          <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+          <div class="message_triangle"></div>
+          <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+        </div>
+
+        <div class="student_phto_wrapper">
+          <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
+          <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+          <div class="message_triangle"></div>
+          <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+        </div>
+
+        <div class="student_phto_wrapper">
+          <img class="student_phto" src="https://c7.staticflickr.com/4/3492/3464131894_00370eb765.jpg" alt="學生大頭貼">
+          <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+          <div class="message_triangle"></div>
+          <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+        </div>
+
+        <div class="student_phto_wrapper">
+          <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
+          <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+          <div class="message_triangle"></div>
+          <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+        </div>
+
+        <div class="student_phto_wrapper">
+          <img class="student_phto" src="https://c7.staticflickr.com/4/3492/3464131894_00370eb765.jpg" alt="學生大頭貼">
+          <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+          <div class="message_triangle"></div>
+          <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+        </div>
+
+        <div class="student_phto_wrapper">
+          <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
+          <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+          <div class="message_triangle"></div>
+          <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+        </div>
+
+        <div class="student_phto_wrapper">
+          <img class="student_phto" src="https://c7.staticflickr.com/4/3492/3464131894_00370eb765.jpg" alt="學生大頭貼">
+          <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+          <div class="message_triangle"></div>
+          <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+        </div>
+
       </div>
     </aside>
-  
+    <div id="teacher_info">
+      <img id="teacher_photo" src="pic/example_face_img.png" alt="老師照片">
+      <div>
+        <div id="teacher_name">Vanessa Ding</div>
+        <span id="info_track">
+            <img id="track_favorite" src="pic/favorite.png" alt="">
+            已追蹤
+          </span>
+      </div>
+    </div>
     <video id="live_video" src="./video/road.mp4" controls></video>
   </section>
   <section class="page_section" id="buttons_section">
