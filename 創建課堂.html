@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/createClass.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+  <title>創建課堂</title>
+</head>
+<body>
+  <header class="page_section" id="header">
+    <img src="pic/Logo-02.png" alt="pic/cloudclass.png" id="logo">
+    <span id="page_tag">創建課程</span>
+    <div id="nav_wrapper">
+      <span class="nav">儲存</span>
+      <span class="nav">取消</span>
+    </div>
+  </header>
+  <section class="page_section" id="orange_section"></section>
+  <section class="page_section" id="content_section">
+    <div class="one_part">
+      <h1 class="part_title">課程圖片</h1>
+      <section class="part_content">
+        <div class="upload_img">
+          <img class="upload_img_icon" src="pic/pic_icon.png" alt="圖片圖示">
+        </div>
+        <div class="choice_button_wrapper">
+          <div class="fake_choice_button">選擇</div>
+          <input class="true_choice_button" name="File" type="file" size="20" />
+        </div>
+        
+      </section>
+    </div>
+
+    <div class="one_part">
+      <h1 class="part_title">課程名稱</h1>
+      <section class="part_content">
+        <input id="class_name" type="text">
+      </section>
+    </div>
+
+    <div class="one_part">
+      <h1 class="part_title">關於課程((學習目標&適合群族&自備用品</h1>
+      <section class="part_content">
+        <textarea id="about_class">
+        </textarea>
+      </section>
+    </div>
+
+    <div class="one_part">
+      <h1 class="part_title">上課時間(課程時數&單一卡片多梯制</h1>
+      <section class="part_content" id="class_time">
+       <div>
+          <select name="year" class="type_select" id="">
+            <option value="">2016</option>
+            <option value="">2017</option>
+          </select>
+          <select name="month" class="type_select short_select">
+            <option value="">1</option>
+            <option value="">2</option>
+          </select>
+          <select name="date" class="type_select short_select">
+            <option value="">31</option>
+            <option value="">30</option>
+          </select>
+        </div>
+        <div>
+          <span>從</span>
+          <select name="" class="type_select short_select">
+            <option value="">1</option>
+            <option value="">2</option>
+          </select>
+          <span>：</span>
+          <select name="" class="type_select short_select">
+            <option value="">30</option>
+            <option value="">31</option>
+          </select>
+          <span>到</span>
+          <select name="" class="type_select short_select">
+            <option value="">1</option>
+            <option value="">2</option>
+          </select>
+          <span>：</span>  
+          <select name="" class="type_select short_select">
+            <option value="">30</option>
+            <option value="">31</option>
+          </select>
+        </div>
+      </section>
+    </div>
+
+    <div class="one_part">
+      <h1 class="part_title">課程價格</h1>
+      <section class="part_content">
+        <span class="part_description">一小時</span>
+        <select name="" class="type_select short_select">
+            <option value="">100</option>
+            <option value="">200</option>
+        </select>
+        <span class="part_description">TWD</span>
+      </section>
+    </div>
+
+    <div class="one_part">
+      <h1 class="part_title">課程分類</h1>
+      <section class="part_content">
+        <div id="tag_box">
+          <div class="category_tag">程式</div>
+          <div class="category_tag">設計</div>
+          <div class="category_tag">運動</div>
+          <div class="category_tag">學術</div>
+          <div class="category_tag">語言</div>
+          <div class="category_tag">生活</div>
+          <div class="category_tag">才藝</div>
+          <div class="category_tag">影音</div>
+          <div class="category_tag">遊戲</div>
+          <div class="category_tag">工具</div>
+          <div class="category_tag">其他</div>
+        </div>
+      </section>
+    </div>
+
+    <div class="one_part">
+      <h1 class="part_title">課程影片</h1>
+      <section class="part_content">
+        <div class="upload_img">
+          <img class="upload_img_icon" src="pic/pic_icon.png" alt="影片上傳圖示">
+        </div>
+        <div class="choice_button_wrapper">
+          <div class="fake_choice_button">選擇</div>
+          <input class="true_choice_button" name="File" type="file" size="20" />
+        </div>
+      </section>
+    </div>
+
+    <div class="one_part">
+      <h1 class="part_title">課程單元</h1>
+      <section class="part_content">
+        <ol id="class_unit">
+          <li class="li_class_unit_name">
+            <input class="class_unit_name" type="text" placeholder="Working">
+          </li>
+          <li class="li_class_unit_name">
+            <input class="class_unit_name" type="text" placeholder="Sleeping">
+          </li>
+          <li class="li_class_unit_name">
+            <input class="class_unit_name" type="text" placeholder="Working">
+          </li>
+          <li class="li_class_unit_name">
+            <input class="class_unit_name" type="text" placeholder="Sleeping">
+          </li>
+        </ol>
+        <div id="add_class_unit">新增</div>
+      </section>
+    </div>
+
+  </section>
+  <section class="page_section" id="create_class_section">
+    <div id="create_class">創建</div>
+  </section>
+  
+</body>
+</html>
