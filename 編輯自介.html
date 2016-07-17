@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/editIntro.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+  <title>編輯自介</title>
+</head>
+<body>
+  <header class="page_section" id="header">
+    <img src="pic/Logo-02.png" alt="pic/cloudclass.png" id="logo">
+    <span id="page_tag">個人資料</span>
+    <div id="nav_wrapper">
+      <span class="nav">儲存</span>
+      <span class="nav">取消</span>
+    </div>
+  </header>
+  <section class="page_section" id="orange_section"></section>
+  <section class="page_section" id="content_section">
+    <div class="one_part">
+      <h1 class="part_title">個人資料相片</h1>
+      <section class="part_content">
+        <div class="upload_img">
+          <img class="upload_img_icon" src="pic/pic_icon.png" alt="圖片圖示">
+        </div>
+        <div class="choice_button_wrapper">
+          <div class="fake_choice_button">選擇</div>
+          <input class="true_choice_button" name="File" type="file" size="20" />
+        </div>
+        
+      </section>
+    </div>
+
+    <div class="one_part">
+      <h1 class="part_title">姓名</h1>
+      <section class="part_content">
+        <input id="class_name" type="text">
+      </section>
+    </div>
+
+    <div class="one_part">
+      <h1 class="part_title">關於我</h1>
+      <section class="part_content">
+        <textarea id="about_class">
+        </textarea>
+      </section>
+    </div>
+
+    <div class="one_part">
+      <h1 class="part_title">綁定資訊</h1>
+      <section class="part_content" id="bind_info">
+
+        <div class="info_wrapper">
+          帳號：
+          <span id="account">funhouse.rb@gmail.com</span>
+          <img id="OK_icon" src="pic/OK_icon.png" alt="OK">
+        </div>
+        <div class="info_wrapper">
+          密碼：
+          <span class="info_feature_button">更改密碼</span>
+        </div>
+        <div class="info_wrapper">
+          Facebook：
+          <span class="info_feature_button">斷開連結</span>
+        </div>
+      </section>
+    </div>
+
+  </section>
+  
+</body>
+</html>
