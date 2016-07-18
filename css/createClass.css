@@ -24,6 +24,7 @@ html,body{
     top: 16px;
     left: 35px;
     height: 34px;
+    cursor: pointer;
 }
 
 .nav{
@@ -31,7 +32,8 @@ html,body{
     font-size: 14px;
     display: block;
     float: right;
-    padding: 0 19px;
+    margin: 0 19px;
+    cursor: pointer;
 }
 
 #nav_wrapper{
@@ -149,6 +151,7 @@ border-radius: 10px;
     background-position-x: 72px;
     font-size: 18px;
     margin: 10px;
+    cursor: pointer;
 }
 
 .short_select{

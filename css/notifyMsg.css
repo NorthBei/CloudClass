@@ -23,6 +23,7 @@ html,body{
     top: 16px;
     left: 35px;
     height: 34px;
+    cursor: pointer;
 }
 
 .nav{
@@ -30,7 +31,8 @@ html,body{
     font-size: 15px;
     display: block;
     float: right;
-    padding: 0 19px;
+    margin: 0 19px;
+    cursor: pointer;
 }
 
 #nav_wrapper{
@@ -45,6 +47,7 @@ html,body{
     border-radius: 100%;
     vertical-align: middle;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 #menu_page{
@@ -104,6 +107,7 @@ html,body{
     padding-left: 12px;
     width: 115px;
     margin-left: 30px;
+    cursor: pointer;
 }
 
 

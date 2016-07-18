@@ -22,6 +22,7 @@ html,body{
     top: 16px;
     left: 35px;
     height: 34px;
+    cursor: pointer;
 }
 
 .nav{
@@ -29,7 +30,8 @@ html,body{
     font-size: 14px;
     display: block;
     float: right;
-    padding: 0 19px;
+    margin: 0 19px;
+    cursor: pointer;
 }
 
 #nav_wrapper{
@@ -129,6 +131,10 @@ html,body{
     width: 320px;
 }
 
+.slide_img{
+    cursor: pointer;
+}
+
 .price_wrapper{
     position: absolute;
     top: 148px;
@@ -161,6 +167,7 @@ html,body{
     right: 7px;
     border-radius: 100%;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 .img_intro{
@@ -227,6 +234,7 @@ html,body{
     Set the background color to a BadAss Green color */
     background: url(../pic/select_arrow.png) no-repeat right white;
     background-position-x: 72px;
+    cursor: pointer;
 }
 
 #learn_what{
@@ -244,6 +252,7 @@ html,body{
     vertical-align: bottom;
     margin-left: -4px;
     font-weight: 100;
+    cursor: pointer;
 }
 
 #about_company_section{

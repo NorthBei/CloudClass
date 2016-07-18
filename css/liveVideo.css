@@ -23,6 +23,7 @@ html,body{
     top: 16px;
     left: 35px;
     height: 34px;
+    cursor: pointer;
 }
 
 #live_header{
@@ -54,6 +55,7 @@ html,body{
     border: 1px solid #999999;
     padding: 2px 11px;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .nav{
@@ -61,7 +63,8 @@ html,body{
     font-size: 14px;
     display: block;
     float: right;
-    padding: 0 19px;
+    margin: 0 19px;
+    cursor: pointer;
 }
 
 #nav_wrapper{
@@ -76,6 +79,7 @@ html,body{
     border-radius: 100%;
     vertical-align: middle;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 #live_status_page{
@@ -125,6 +129,7 @@ html,body{
     position: relative;
     z-index: 10;
     background-color: #f6f6f6;
+    cursor: pointer;
 }
 
 #scroll_area{
@@ -233,6 +238,7 @@ html,body{
     font-weight: normal;
     margin-top: 6px;
     font-size: 12px;
+    cursor: pointer;
 }
 
 #track_favorite{

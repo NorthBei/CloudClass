@@ -27,6 +27,7 @@ cite{
     top: 16px;
     left: 35px;
     height: 34px;
+    cursor: pointer;
 }
 
 .nav{
@@ -34,7 +35,8 @@ cite{
     font-size: 15px;
     display: block;
     float: right;
-    padding: 0 19px;
+    margin: 0 19px;
+    cursor: pointer;
 }
 
 #nav_wrapper{
@@ -168,6 +170,7 @@ cite{
     width: 154px;
     border-radius: 100%;
     margin-right: 45px;
+    cursor: pointer;
 }
 
 #info_name,#info_email{
@@ -189,7 +192,8 @@ cite{
     display: inline-block;
     font-weight: normal;
     margin-top: 6px;
-    font-size:12px
+    font-size:12px;
+    cursor: pointer;
 }
 
 #track_favorite{
@@ -259,7 +263,9 @@ cite{
     width: 320px;
 }
 
-
+.slide_img{
+    cursor: pointer;
+}
 
 .price_wrapper{
     position: absolute;
@@ -293,6 +299,7 @@ cite{
     right: 7px;
     border-radius: 100%;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 .img_intro{
@@ -364,6 +371,7 @@ cite{
     vertical-align: bottom;
     margin-left: -4px;
     font-weight: 100;
+    cursor: pointer;
 }
 
 #about_company_section{

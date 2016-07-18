@@ -27,6 +27,7 @@ cite{
     top: 16px;
     left: 35px;
     height: 34px;
+    cursor: pointer;
 }
 
 .nav{
@@ -34,7 +35,8 @@ cite{
     font-size: 14px;
     display: block;
     float: right;
-    padding: 0 19px;
+    margin: 0 19px;
+    cursor: pointer;
 }
 
 #nav_wrapper{
@@ -49,6 +51,7 @@ cite{
     border-radius: 100%;
     vertical-align: middle;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 #menu_page{
@@ -63,6 +66,7 @@ cite{
     margin: 0 18px;
     line-height: 40px;
     /*line-height同高度*/
+    cursor: pointer;
 }
 
 #link_wrapper{
@@ -103,6 +107,7 @@ cite{
     display: inline-block;
     font-weight: normal;
     margin: 7px;
+    cursor: pointer;
 }
 
 #class_info{
@@ -120,6 +125,7 @@ cite{
     width: 154px;*/
     height: 120px;
     width: 120px;
+    cursor: pointer;
 }
 
 #teacher_name{
@@ -138,6 +144,7 @@ cite{
 
 #bookmark{
     width: 20px;
+    cursor: pointer;
 }
 
 #class_info_wrapper{
@@ -236,6 +243,7 @@ cite{
     padding: 3px 25px;
     margin: 0 19px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 #start_learning{
@@ -301,6 +309,7 @@ cite{
     width: 154px;
     border-radius: 100%;
     margin-right: 45px;
+    cursor: pointer;
 }
 
 #info_name,#info_email{
@@ -322,7 +331,8 @@ cite{
     display: inline-block;
     font-weight: normal;
     margin-top: 6px;
-    font-size:12px
+    font-size:12px;
+    cursor: pointer;
 }
 
 #track_favorite{
@@ -445,6 +455,7 @@ cite{
     Set the background color to a BadAss Green color */
     background: url(../pic/select_arrow.png) no-repeat right white;
     background-position-x: 72px;
+    cursor: pointer;
 }
 
 #learn_what{
@@ -462,6 +473,7 @@ cite{
     vertical-align: bottom;
     margin-left: -4px;
     font-weight: 100;
+    cursor: pointer;
 }
 
 #about_company_section{

@@ -31,7 +31,7 @@ html,body{
     font-size: 15px;
     display: block;
     float: right;
-    padding: 0 19px;
+    margin: 0 19px;
     cursor: pointer;
 }
 
@@ -107,6 +107,7 @@ html,body{
 .tabs{
     margin: 0 13px;
     position: relative;
+    cursor: pointer;
 }
 
 .now_at{
@@ -136,6 +137,7 @@ html,body{
     margin-left: 6px;
     font-size: 15px;
     font-family: inherit;
+    cursor: pointer;
 }
 
 #way{
@@ -196,6 +198,7 @@ html,body{
     font-size: 20px;
     color:#a29e9e;
     line-height: 39px;
+    cursor: pointer;
 }
 
 #about_company_section{
