@@ -7,8 +7,7 @@ html,body{
     margin: 0;
     padding: 0;
     color: #4A4A4A;
-    /*font-family: "Hiragino Sans GB","华文细黑","STHeiti","微软雅黑","Microsoft YaHei",SimHei,"Helvetica Neue",Helvetica,Arial,sans-serif;*/
-    font-family: Helvetica,"Helvetica_web_font",Arial,sans-serif;
+    font-family: Helvetica,"Hiragino Sans GB","华文细黑","STHeiti","微软雅黑","Microsoft YaHei",SimHei,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 cite{
