@@ -31,7 +31,7 @@ cite{
 
 .nav{
     line-height: 61px;
-    font-size: 14px;
+    font-size: 15px;
     display: block;
     float: right;
     padding: 0 19px;
@@ -57,6 +57,7 @@ cite{
 }
 
 #link_wrapper>a{
+    font-size: 15px;
     text-decoration: none;
     color: white;
     margin: 0 18px;
@@ -102,11 +103,11 @@ cite{
 }
 
 #slide_title{
-    font-size: 56px;
+    font-size: 50px;
 }
 
 #slide_subtitle{
-    font-size: 21px;
+    font-size: 18px;
 }
 
 #select_section{
@@ -132,7 +133,7 @@ cite{
 }
 
 .article_title{
-    font-size: 30px;
+    font-size: 32px;
     font-weight: normal;
 }
 
@@ -183,17 +184,18 @@ cite{
     color: #999999 ;
     border: 1px solid #999999;
     border-radius: 2px;
-    padding: 3px 15px;
+    padding:5px 11px;
     vertical-align: top;
     display: inline-block;
     font-weight: normal;
     margin-top: 6px;
+    font-size:12px
 }
 
 #track_favorite{
     vertical-align: middle;
-    margin-left: -7px;
-    margin-right: 10px;
+    margin-left:2px;
+    margin-right:4px;
 }
 
 #experience_works{
@@ -204,9 +206,9 @@ cite{
     width: 50%;
 }
 
-.exp_year{}
-
-.exp_row{}
+.experience_works_title{
+    font-size: 18px;
+}
 
 .one_work{
     text-decoration: none;

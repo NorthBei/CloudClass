@@ -96,21 +96,21 @@ html,body{
     align-self: flex-end;
     margin-left: 20px;
     position: relative;
-    width: 88px;
-    height: 31px;
+    width: 108px;
+    height: 43px;
     overflow: hidden;
 }
 .fake_choice_button{
     background-color: #F5A623;
     border: 1px solid #DF951A;
-    border-radius: 5px;
+    border-radius: 4px;
     color: white;
     display: inline-block;
-    padding: 3px 28px;
+    padding: 10px 38px;
     font-weight: normal;
     font-size: 15px;
     cursor: pointer;
-    width: 88px;
+    width: 108px;
     box-sizing: border-box;
 }
 .true_choice_button{

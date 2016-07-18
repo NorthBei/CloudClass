@@ -28,7 +28,7 @@ html,body{
 
 .nav{
     line-height: 61px;
-    font-size: 14px;
+    font-size: 15px;
     display: block;
     float: right;
     padding: 0 19px;
@@ -56,6 +56,7 @@ html,body{
 }
 
 #link_wrapper>a{
+    font-size: 15px;
     text-decoration: none;
     color: white;
     margin: 0 18px;
@@ -197,6 +198,7 @@ html,body{
 }
 .input_title{
     font-size: 16px;
+    padding-bottom: 6px;
 }
 .text_input{
     width: 80%;

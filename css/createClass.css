@@ -96,21 +96,21 @@ html,body{
     align-self: flex-end;
     margin-left: 20px;
     position: relative;
-    width: 88px;
-    height: 31px;
+    width: 108px;
+    height: 43px;
     overflow: hidden;
 }
 .fake_choice_button{
     background-color: #F5A623;
     border: 1px solid #DF951A;
-    border-radius: 5px;
+    border-radius: 4px;
     color: white;
     display: inline-block;
-    padding: 3px 28px;
+    padding: 10px 38px;
     font-weight: normal;
     font-size: 15px;
     cursor: pointer;
-    width: 88px;
+    width: 108px;
     box-sizing: border-box;
 }
 .true_choice_button{
@@ -180,6 +180,12 @@ border-radius: 10px;
     margin: 5px 10px;
     flex-wrap:wrap;
     display: inline-block;
+    cursor: pointer;
+}
+
+.category_tag:hover{
+    color:white;
+    background-color: #999;
 }
 
 #class_unit{
@@ -200,11 +206,10 @@ border-radius: 10px;
     color: #f5a623;
     border: 2px solid #f5a623;
     display: inline-block;
-    font-size: 22px;
-    padding: 5px 67px;
-    border-radius: 6px;
-    align-self: flex-end;
+    padding: 10px 38px;
     cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
 }
 
 .li_class_unit_name{
@@ -238,9 +243,11 @@ border-radius: 10px;
     color: white;
     height: 20px;
     align-self: flex-end;
-    margin: 34px 20px;
-    padding: 5px 16px;
-    border-radius: 4px;
+    margin: 30px 20px;
+    /*padding: 5px 16px;*/
     cursor: pointer;
     margin-left: -17px;
+    padding: 10px 38px;
+    border-radius: 4px;
+    font-size: 14px;
 }

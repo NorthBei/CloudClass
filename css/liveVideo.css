@@ -46,7 +46,7 @@ html,body{
 
 #live_title{
     font-weight: bold;
-    font-size: 21px;
+    font-size: 18px;
     margin: 0 19px;
 }
 #show_key{
@@ -79,6 +79,7 @@ html,body{
 }
 
 #live_status_page{
+    font-size: 15px;
     background-color: #525252;
     height: 40px;
     display: flex;
@@ -87,11 +88,21 @@ html,body{
     padding: 0 22px;
     box-sizing: border-box;
     color: white;
-    font-size: 17px;
+}
+
+#live_status_page>div{
+    width: 200px;
+    font-size:15px;
+}
+
+#class_timer{
+    text-align: center;
 }
 
 .status_bar_button{
     padding-left: 20px;
+    float: right;
+    cursor: pointer;
 }
 
 #live_video_section{
@@ -208,25 +219,26 @@ html,body{
 
 #teacher_name{
     color: white;
-    font-size: 20px;
+    font-size: 14px;
     text-shadow: 2px 2px 3px #434a54;
 }
 
 #info_track{
-    color: #999999 ;
+    color: #999999;
     border: 1px solid #999999;
     border-radius: 2px;
-    padding: 3px 15px;
+    padding: 5px 11px;
     vertical-align: top;
     display: inline-block;
     font-weight: normal;
     margin-top: 6px;
+    font-size: 12px;
 }
 
 #track_favorite{
     vertical-align: middle;
-    margin-left: -7px;
-    margin-right: 10px;
+    margin-left: 2px;
+    margin-right: 4px;
 }
 
 #live_video{

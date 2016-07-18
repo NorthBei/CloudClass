@@ -57,6 +57,7 @@ cite{
 }
 
 #link_wrapper>a{
+    font-size: 15px;
     text-decoration: none;
     color: white;
     margin: 0 18px;
@@ -132,7 +133,7 @@ cite{
 }
 
 #class_name{
-    font-size: 36px;
+    font-size: 28px;
 }
 
 #bookmark{
@@ -149,13 +150,20 @@ cite{
 }
 
 .category_tag{
-    color: #999999;
-    padding: 0px 11px;
-    border: 2px solid #999999;
-    border-radius: 5px;
-    margin: 0 5px;
-    font-size: 18px;
     text-decoration: none;
+    border-radius: 2px;
+    padding: 2px 11px;
+    border: 1px solid #999;
+    color: #999;
+    font-size: 16px;
+    margin: 5px 10px;
+    flex-wrap:wrap;
+    display: inline-block;
+}
+
+.category_tag:hover{
+    background-color: #999;
+    color: white;
 }
 
 #applied_num{
@@ -249,7 +257,7 @@ cite{
 }
 
 .article_title{
-    font-size: 30px;
+    font-size: 32px;
     font-weight: normal;
 }
 
@@ -309,25 +317,30 @@ cite{
     color: #999999 ;
     border: 1px solid #999999;
     border-radius: 2px;
-    padding: 3px 15px;
+    padding:5px 11px;
     vertical-align: top;
     display: inline-block;
     font-weight: normal;
     margin-top: 6px;
+    font-size:12px
 }
 
 #track_favorite{
     vertical-align: middle;
-    margin-left: -7px;
-    margin-right: 10px;
+    margin-left:2px;
+    margin-right:4px;
 }
 
 #experience_works{
     display: flex;
 }
 
-#experience,works{    
+#experience,#works{    
     width: 50%;
+}
+
+.experience_works_title{
+    font-size:18px;
 }
 
 .exp_year{}
