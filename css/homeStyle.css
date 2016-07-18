@@ -59,13 +59,13 @@ html,body{
     color: white;
 }
 #slogan_title{
-    font-size: 65px;
+    font-size: 60px;
     font-weight: 100;
     margin: 0;
 }
 
 #slogan_subtitle{
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 100;
     margin: 3px 0;
 }
@@ -146,8 +146,8 @@ html,body{
 }
 
 #slide_title{
-    font-size: 40px;
-    font-weight: 400;
+    font-size: 32px;
+    font-weight: bold;
     padding: 45px 0 0;
 }
 
@@ -175,7 +175,7 @@ html,body{
     z-index: 3;
     width: 50%;
     color: white;
-    font-size: 30px;
+    font-size: 28px;
 }
 
 .slide_img_wrapper{
@@ -226,8 +226,7 @@ html,body{
 
 #pic_section{
     background-image: url(../pic/drawer.jpg);
-    background-position:center -256px;
-    /*background-position: center center;*/
+    background-position: center center;
     background-repeat: no-repeat; 
     background-size: cover;
     height: 500px;
@@ -269,12 +268,13 @@ html,body{
 }
 
 .entity-title{
-    font-size: 30px;
+    font-size: 28px;
     margin: 10px 0 0;
 }
 
 .entity-content{
     margin: 10px 0 0;
+    font-size: 17px;
 }
 
 #list_wrapper{
@@ -302,10 +302,10 @@ html,body{
     text-decoration: none;
     color:white;
     margin: 0 20px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 #copyright{
     padding: 18px 0;
-    font-size: 15px;
+    font-size: 13px;
 }
