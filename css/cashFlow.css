@@ -77,6 +77,147 @@ html,body{
     top: -25px;
 }
 
+#cash_flow_section{
+    background-color: #f6f6f6;
+    min-height: 100vh;
+    padding: 50px 8%;
+    display: flex;
+    flex-direction: row;
+}
+
+.wrapper{
+    position: relative;
+    width: 320px;
+}
+
+.price_wrapper{
+    position: absolute;
+    top: 148px;
+    background-color: #4d4c4a;
+    color: white;
+    height: 45px;
+    padding: 0 10px;
+}
+
+.cost_icon,.NTD{
+    vertical-align: bottom;
+}
+
+.price{
+    position: relative;
+    top: 6px;
+    margin-left: 18px;
+    margin-right: 5px;
+    font-size: 32px;
+}
+
+.two-col{
+    display: flex;
+    width: 100%;
+}
+.face-img{
+    height: 67px;
+    position: relative;
+    top: -31px;
+    right: 7px;
+    border-radius: 100%;
+    margin-left: 10px;
+}
+
+.img_intro{
+    margin-top: 15px;
+    font-size: 22px;
+    white-space:pre-wrap; 
+}
+
+#cash_flow_info{
+    width: 100%;
+    background-color: white;
+    padding: 25px 40px;
+}
+
+.cash_flow_detail_title{
+    font-size: 23px;
+    margin: 0;
+    font-weight: normal;
+}
+.split_line{
+    height: 1px;
+    border: 0;
+    background-color: #C8C8C8;
+}
+
+.cash_flow_detail_content{
+    font-size: 16px;
+}
+
+.buy_class_info{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+#use_Coupon{
+    text-align: right;
+    padding: 13px 0;
+}
+
+#dash_box{
+    border-top: 1px dashed;
+    border-bottom: 1px dashed;
+    padding: 26px 0 11px; 
+}
+
+.radio_button_group{
+    display: flex;
+    flex-direction: column;
+}
+
+.radio_button_wrapper{
+    padding: 7px 0;
+    font-size: 16px;
+}
+
+#cash_flow_total{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+#must_info_form{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0;
+}
+
+.must_info{
+    width: 50%;
+}
+.input_title{
+    font-size: 16px;
+}
+.text_input{
+    width: 80%;
+    height: 33px;
+    padding-left: 10px;
+    border-radius: 2px;
+    border: 1px solid #c4c4c4;
+}
+
+.second_select{
+    margin-left: 20px;
+}
+
+#check_to_buy{
+    color: white;
+    background-color: #F5A623;
+    padding: 8px 27px;
+    display: inline-block;
+    font-size: 17px;
+    border-radius: 4px;
+    margin: 30px 0;
+}
+
 
 #about_company_section{
     background-color: #2c2d2f;
