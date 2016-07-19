@@ -114,8 +114,8 @@ cite{
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    height: 296px;
-    padding: 50px 120px;
+    height: 260px;
+    padding: 40px 75px;
     padding-right: 0;
 }
 
@@ -166,6 +166,7 @@ cite{
     margin: 5px 10px;
     flex-wrap:wrap;
     display: inline-block;
+    margin-top: -1px;
 }
 
 .category_tag:hover{
@@ -190,7 +191,7 @@ cite{
     border: 1px solid #999999;
     position: absolute;
     top: 652px;
-    right: 45px;
+    right: 75px;
     font-size: 17px;
 }
 

@@ -76,6 +76,10 @@ html,body{
     width: 215px;
 }
 
+.personal_option:hover{
+    padding-left: 26px;
+}
+
 .personal_option_splite_line{
     background-color: #dcdbdb;
     height: 1px;

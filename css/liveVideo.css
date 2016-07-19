@@ -269,11 +269,12 @@ html,body{
 }
 
 #ask_input{
-    background-color: rgba(0,0,0,0.5);
-    border: 0;
+    background-color: rbga(255,255,255,0);
+    border: 1px solid #979797;
     padding: 0px 20px;
     font-size: inherit;
     width: 320px;
+    color: #979797;
 }
 
 #ask_submit{
