@@ -182,11 +182,15 @@ cite{
     font-weight: bold;
 }
 
+#price_box_cover{
+    flex: 0 0 475px;
+}
+
 #price_box{
     border: 1px solid #999999;
-    position: relative;
-    top: -76px;
-    left: 45px;
+    position: absolute;
+    top: 652px;
+    right: 45px;
     font-size: 17px;
 }
 

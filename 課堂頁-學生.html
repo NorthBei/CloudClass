@@ -55,30 +55,32 @@
           </span>
       </div>
     </div><!--end-->
+    <!--因為price_box用絕對定位，這是用來卡住右邊大小的div-->
+    <div id="price_box_cover"></div>
     <!--價格框框-->
-      <div id="price_box">
-        <div id="price_box_title">
-          上課時間：2016 / 09 / 04 (日)
-          <span id="blank"></span>
-          19:00~21:00
+    <div id="price_box">
+      <div id="price_box_title">
+        上課時間：2016 / 09 / 04 (日)
+        <span id="blank"></span>
+        19:00~21:00
+      </div>
+      <div id="price_box_content">
+        <div id="content_row1">
+          本堂課為第
+          <span id="batch">1</span>
+          梯次開課
         </div>
-        <div id="price_box_content">
-          <div id="content_row1">
-            本堂課為第
-            <span id="batch">1</span>
-            梯次開課
-          </div>
-          <div>
-            上課時間3小時，合計為
-            <span id="price">600</span>
-            <span id="money_type">TWD</span>
-          </div>
-          <div id="button_wrapper">
-            <div class="bottom_button" id="start_learning">發送消息</div>
-            <div class="bottom_button" id="buy">取消購買</div>
-          </div>
+        <div>
+          上課時間3小時，合計為
+          <span id="price">600</span>
+          <span id="money_type">TWD</span>
+        </div>
+        <div id="button_wrapper">
+          <div class="bottom_button" id="start_learning">發送消息</div>
+          <div class="bottom_button" id="buy">取消購買</div>
         </div>
       </div>
+    </div>
   </section>
 
   <section class="page_section" id="about_section">
