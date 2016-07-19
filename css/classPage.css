@@ -118,9 +118,7 @@ cite{
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    /*height: 233px;
-    padding: 40px 75px;*/
-    height: 249px;
+    height: 210px;
     padding: 47px 75px;
     padding-right: 0;
 }
