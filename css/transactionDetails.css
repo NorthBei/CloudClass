@@ -150,6 +150,7 @@ html,body{
     display: inline-block;
     position: absolute;
     top: 28px;
+    left: 0px;
 }
 
 #transaction_details_content{

@@ -14,7 +14,6 @@
 }
 
 #sign_in_box{
-    height: 380px;
     width: 330px;
     background-color: white;
     border-radius: 10px;
@@ -60,7 +59,7 @@ border: 0;
 
 #eye_slash{
     position: absolute;
-    top: 31px;
+    top: 33px;
     right: 13px;
     cursor: pointer;
     height: 18px;

@@ -149,6 +149,10 @@ html,body{
     padding-left: 10px;
 }
 
+.auto_complete_row:hover{
+    background-color: #eeeeee;
+}
+
 #go_search{
     background-color: #ff5a5f;
     color: #fff;
