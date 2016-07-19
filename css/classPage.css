@@ -364,10 +364,32 @@ cite{
     margin: 12px 0;
 }
 
-#messages{
+#messages_section{
     padding: 0 23%;
     padding-top: 70px;
     box-sizing: border-box;
+}
+
+#message_input_wrapper{
+    height: 110%;
+}
+
+#message_input{
+    width: 100%;
+    height: 130px;
+}
+
+#submit_message_wrapper{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#submit_message{
+    background-color: #EDEFEC;
+    padding: 6px 20px;
+    margin-right: -5px;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
 .message_writer{
