@@ -56,10 +56,14 @@ html,body{
 #link_wrapper>a{
     font-size: 15px;
     text-decoration: none;
-    color: white;
+    color: #bbb;
     margin: 0 18px;
     line-height: 40px;
     /*line-height同高度*/
+}
+
+#link_wrapper>a:hover{
+    color: white;
 }
 
 #link_wrapper{
@@ -70,7 +74,7 @@ html,body{
 }
 
 .now_flag{
-    background-color: white;
+    background-color: #bbb;
     height: 5px;
     width: 100%;
     display: inline-block;

@@ -46,6 +46,10 @@
     padding-bottom: 6px;
 }
 
+.input_wrapper{
+    position: relative;
+}
+
 .input_area{
 border: 0;
     border-bottom: 1px solid #CCCCCC;
@@ -59,7 +63,8 @@ border: 0;
 
 #eye_slash{
     position: absolute;
-    top: 33px;
+    top: 50%;
+    transform: translateY(-50%);
     right: 13px;
     cursor: pointer;
     height: 18px;
