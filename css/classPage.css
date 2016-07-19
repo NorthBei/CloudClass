@@ -468,6 +468,11 @@ cite{
     transform: translateX(-50%);
 }
 
+#search_input{
+    display: inline-block;
+    margin-left: 10px;
+}
+
 #select_category,#learn_what,#go_search{
     height: 44px;
     box-sizing: border-box;
@@ -491,10 +496,31 @@ cite{
     cursor: pointer;
 }
 
-#learn_what{
+#learn_what,#auto_complete_box{
     width: 530px;
     padding:10px;
-    margin-left: 10px;
+    /*margin-left: 10px;*/
+}
+
+#auto_complete_box{
+    position: absolute;
+    box-sizing: border-box;
+    padding: 0;
+    display: none;
+}
+
+.auto_complete_row {
+    background-color: white;
+    height: 44px;
+    line-height: 44px;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.auto_complete_row:hover{
+    background-color: #eeeeee;
 }
 
 #go_search{

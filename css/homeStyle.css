@@ -137,6 +137,7 @@ html,body{
     position: absolute;
     box-sizing: border-box;
     padding: 0;
+    display: none;
 }
 
 .auto_complete_row {
