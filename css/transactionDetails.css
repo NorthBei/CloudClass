@@ -53,6 +53,7 @@ html,body{
 #personal_option_box{
     position: absolute;
     left: 147px;
+    display: none;
 }
 
 #personal_option_wrapper{
