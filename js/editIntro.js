@@ -119,9 +119,7 @@ var BindInfo = React.createClass({
     }
 });
 
-window.addEventListener("load",function name(params) {
-    ReactDOM.render(
-        <Body/>,
-        document.getElementById('body')
-    );
-})
+ReactDOM.render(
+    <Body/>,
+    document.getElementById('body')
+);
