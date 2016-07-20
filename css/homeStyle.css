@@ -195,6 +195,7 @@ html,body{
 .wrapper{
     position: relative;
     width: inherit;
+    cursor: pointer;
 }
 
 .slide_img_intro{
@@ -210,8 +211,9 @@ html,body{
 
 .slide_img_wrapper{
     width: 90%;
-    height: 50vh;
+    height: 0;
     overflow: hidden;
+    padding-bottom: 84.7%;
 }
 
 .slide_img{
