@@ -443,6 +443,7 @@ cite{
 
 .message_writer{
     margin-right: 80px;
+    flex: 0 0 100px;
 }
 
 .messages_entity{

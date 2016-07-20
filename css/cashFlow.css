@@ -133,6 +133,7 @@ html,body{
 .wrapper{
     position: relative;
     width: 320px;
+    flex: 0 0 320px;
 }
 
 .slide_img{
