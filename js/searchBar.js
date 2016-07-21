@@ -32,7 +32,7 @@ var Select = React.createClass({
 var AutoCompleteRow = React.createClass({
     render: function() {
         return (
-            <div class="auto_complete_row">陽明山</div>
+            <div className="auto_complete_row">陽明山</div>
         );
     }
 });

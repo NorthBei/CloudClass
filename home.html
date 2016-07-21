@@ -5,7 +5,10 @@
   <link rel="stylesheet" type="text/css" href="lib/slick/slick.css"/>
   <script type="text/javascript" src="jquery/jquery-3.0.0.min.js"></script>  
   <script type="text/javascript" src="lib/slick/slick.min.js"></script>
-  <script type="text/javascript">
+  <script src="./reactJs/react.15.2.1.js"></script>
+  <script src="./reactJs/react-dom.15.2.1.js"></script>
+  <script src="./reactJs/browser.min.js"></script>
+  <!--<script type="text/javascript">
     $(document).ready(function(){
       $('.slide_box').slick({
         infinite: true,
@@ -15,7 +18,7 @@
         nextArrow:"<img id='right_arrow' src='pic/slide_arrow_right.png'>"
       });
     });
-  </script>
+  </script>-->
   <meta charset="utf-8">
   <title>Home</title>
 </head>
@@ -23,12 +26,12 @@
   <section class="page_section" id="welcom_page_section">
     <img src="pic/Cloud Class Copy.png" alt="pic/cloudclass.png" id="logo">
     <div id="nav_wrapper">
-      <span class="nav">登入</span>
+      <!--<span class="nav">登入</span>
       <span class="nav">註冊</span>
       <span class="nav">幫助</span>
       <span class="nav">
         <span id="beTeacher">成為老師</span>
-      </span>
+      </span>-->
     </div>
     <div id="slogan">
       <h1 id="slogan_title">直播教室</h1>
@@ -57,7 +60,7 @@
     </div>
   </section>
   <section class="page_section" id="slide_page">
-    <center>
+    <!--<center>
       <h2 id="slide_title">在家輕鬆上課</h2>
       <h3 id="slide_subtitle">多樣化的課程，學你想學的</h3>
       <div class="slide_box">
@@ -114,10 +117,15 @@
           </div>
         </div>
       </div>
-      <a href="" id="all_class">查看全部課程</a>
-    </center>
-   
+    </center>-->
   </section>
+
+  <section class="page_section" id="see_all_class_section">
+    <center>
+      <a href="" id="all_class_button">查看全部課程</a>
+    </center>
+  </section>
+  
   <section class="page_section" id="pic_section"></section>
   <section class="page_section" id="advantage_section">
     <div id="list_wrapper">
@@ -151,4 +159,6 @@
     </center>
   </section>
 </body>
+<script type="text/babel" src="./js/publicNav.js"></script>
+<script type="text/babel" src="./js/slide.js"></script>
 </html>

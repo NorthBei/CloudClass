@@ -166,7 +166,7 @@ html,body{
      cursor: pointer;
 }
 
-#slide_page{
+#slide_page,#see_all_class_section{
     background-color: #edefec;
 }
 
@@ -244,7 +244,7 @@ html,body{
     font-size: 32px;
 }
 
-#all_class{
+#all_class_button{
     text-decoration: none;
     color: #494949;
     border: 1px solid  #C8C8C8;
