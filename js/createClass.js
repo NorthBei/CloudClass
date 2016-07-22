@@ -247,9 +247,7 @@ var CreatClass = React.createClass({
     }
 });
 
-window.addEventListener("load",function() {
-    ReactDOM.render(
-        <Body/>,
-        document.getElementById('body')
-    );
-})
+ReactDOM.render(
+    <Body/>,
+    document.getElementById('body')
+);
