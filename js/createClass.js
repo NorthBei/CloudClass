@@ -1,10 +1,21 @@
+var tags = [
+    {id:"程式",tagName:"程式"},{id:"設計",tagName:"設計"},{id:"運動",tagName:"運動"},{id:"學術",tagName:"學術"},
+    {id:"語言",tagName:"語言"},{id:"生活",tagName:"生活"},{id:"才藝",tagName:"才藝"},{id:"影音",tagName:"影音"},
+    {id:"遊戲",tagName:"遊戲"},{id:"工具",tagName:"工具"},{id:"其他",tagName:"其他"}
+];
+
+var suggests = [
+    {id:"Working",placeholder:"Working"},{id:"Sleeping",placeholder:"Sleeping"},
+    {id:"Eating",placeholder:"Eating"},{id:"Walking",placeholder:"Walking"}
+];
+
 var Body = React.createClass({
     render: function() {
         return(
             <div>
                 <Header/>
                 <OrangeLine/>
-                <Content/>
+                <Content tags={this.props.tags} suggests={this.props.suggests} />
             </div>
         );
     }
@@ -42,9 +53,9 @@ var Content = React.createClass({
                 <InputAboutClass/>
                 <SelectClassTime/>
                 <ClassPrice/>
-                <ClassCategory/>
+                <ClassCategory tags={this.props.tags}/>
                 <UploadMovie/>
-                <ClassUnitList/>
+                <ClassUnitList suggests={this.props.suggests}/>
                 <CreatClass/>
             </section>
         );
@@ -155,22 +166,17 @@ var Select = React.createClass({
 
 var ClassCategory = React.createClass({
     render: function() {
+        var tagArray = this.props.tags.map(function(tag) {
+            return (
+            <CategoryTag key={tag.id} tagName={tag.tagName} />
+            );
+        });
         return (
             <div className="one_part">
                 <h1 className="part_title">課程分類</h1>
                 <section className="part_content">
                     <div id="tag_box">
-                        <CategoryTag/>
-                        <CategoryTag/>
-                        <CategoryTag/>
-                        <CategoryTag/>
-                        <CategoryTag/>
-                        <CategoryTag/>
-                        <CategoryTag/>
-                        <CategoryTag/>
-                        <CategoryTag/>
-                        <CategoryTag/>
-                        <CategoryTag/>
+                        {tagArray}
                     </div>
                 </section>
             </div>
@@ -181,7 +187,7 @@ var ClassCategory = React.createClass({
 var CategoryTag = React.createClass({
     render: function() {
         return (
-            <div className="category_tag">程式</div>
+            <div className="category_tag">{this.props.tagName}</div>
         );
     }
 });
@@ -207,15 +213,17 @@ var UploadMovie = React.createClass({
 
 var ClassUnitList = React.createClass({
     render: function() {
+        var suggestArray = this.props.suggests.map(function(suggest) {
+            return (
+            <ClassUnit key={suggest.id} placeholder={suggest.placeholder} />
+            );
+        });
         return (
             <div className="one_part">
                 <h1 className="part_title">課程單元</h1>
                 <section className="part_content">
                     <ol id="class_unit">
-                        <ClassUnit/>
-                        <ClassUnit/>
-                        <ClassUnit/>
-                        <ClassUnit/>
+                        {suggestArray}
                     </ol>
                     <button id="add_class_unit">新增</button>
                 </section>
@@ -229,7 +237,7 @@ var ClassUnit = React.createClass({
         return (
         <li className="li_class_unit_name">
             <div className="unit_input_group">
-              <input className="class_unit_name" type="text" placeholder="Working"/>
+              <input className="class_unit_name" type="text" placeholder={this.props.placeholder}/>
               <img className="class_unit_delete_icon" src="pic/X.png" alt="刪除"/>
             </div>
           </li>
@@ -248,6 +256,6 @@ var CreatClass = React.createClass({
 });
 
 ReactDOM.render(
-    <Body/>,
+    <Body tags={tags} suggests={suggests} />,
     document.getElementById('body')
 );

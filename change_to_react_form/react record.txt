@@ -15,5 +15,12 @@ V課堂頁-教師大眾
 V課堂頁-學生
 	發送消息 取消購買
 改button或外包button
-另外react部分 要render同樣的component時改用迴圈下去寫 感恩～
+
+
+另外react部分 要render同樣的component時改用迴圈下去寫
 如searchbar的AutoCompleteRow
+V首頁
+V分類課堂
+V交易明細
+V創建課堂
+

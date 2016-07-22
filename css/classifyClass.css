@@ -193,6 +193,7 @@ button{
     font-size: 17px;
     margin-bottom: 90px;
     border-radius: 2px;
+    cursor: pointer;
 }
 
 #search_section{

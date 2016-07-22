@@ -9,7 +9,8 @@
   <meta charset="utf-8">
   <title>編輯自介</title>
 </head>    
-<body id="body">
+<body >
+  <div id="body"><!--React避免直接操作body，因為body內可能還會有plugin在run,造成react大量修改VDOM-->
   <!--<header class="page_section" id="header">
     <img src="pic/Logo-02.png" alt="pic/cloudclass.png" id="logo">
     <span id="page_tag">個人資料</span>
@@ -70,7 +71,7 @@
     </div>
 
   </section>-->
-  
+  </div>
 </body>
 <script type="text/babel" src="./js/editIntro.js"></script>
 </html>

@@ -1,9 +1,22 @@
+var tableRow = [
+    {id:1,time:"2016年7月17日",type:"搶劫",detail:"一銀盜領案 警方：13名嫌犯已出境",money:8000000,paid:5000},
+    {id:2,time:"2016年7月22日",type:"火燒車",detail:"來台家屬昨晚在住都飯店說明會時，強烈要求台灣官方提供遊覽車起火，及過往車輛的行車紀錄器影片，希望能還原真相。但會後家屬們氣憤表示「要什麼沒有什麼」，會議過程氣氛很僵。",money:10000,paid:400},
+    {id:3,time:"2016年7月17日",type:"搶劫",detail:"一銀盜領案 警方：13名嫌犯已出境",money:8000000,paid:5000},
+    {id:4,time:"2016年7月22日",type:"火燒車",detail:"來台家屬昨晚在住都飯店說明會時，強烈要求台灣官方提供遊覽車起火，及過往車輛的行車紀錄器影片，希望能還原真相。但會後家屬們氣憤表示「要什麼沒有什麼」，會議過程氣氛很僵。",money:10000,paid:400},
+    {id:5,time:"2016年7月17日",type:"搶劫",detail:"一銀盜領案 警方：13名嫌犯已出境",money:8000000,paid:5000},
+    {id:6,time:"2016年7月22日",type:"火燒車",detail:"來台家屬昨晚在住都飯店說明會時，強烈要求台灣官方提供遊覽車起火，及過往車輛的行車紀錄器影片，希望能還原真相。但會後家屬們氣憤表示「要什麼沒有什麼」，會議過程氣氛很僵。",money:10000,paid:400},
+    {id:7,time:"2016年7月17日",type:"搶劫",detail:"一銀盜領案 警方：13名嫌犯已出境",money:8000000,paid:5000},
+    {id:8,time:"2016年7月22日",type:"火燒車",detail:"來台家屬昨晚在住都飯店說明會時，強烈要求台灣官方提供遊覽車起火，及過往車輛的行車紀錄器影片，希望能還原真相。但會後家屬們氣憤表示「要什麼沒有什麼」，會議過程氣氛很僵。",money:10000,paid:400},
+    {id:9,time:"2016年7月17日",type:"搶劫",detail:"一銀盜領案 警方：13名嫌犯已出境",money:8000000,paid:5000},
+    {id:10,time:"2016年7月22日",type:"火燒車",detail:"來台家屬昨晚在住都飯店說明會時，強烈要求台灣官方提供遊覽車起火，及過往車輛的行車紀錄器影片，希望能還原真相。但會後家屬們氣憤表示「要什麼沒有什麼」，會議過程氣氛很僵。",money:10000,paid:400}
+];
+
 var DetailContent = React.createClass({
     render: function() {
         return (
             <div>
                 <SelectGroup/>
-                <DetailTable/>
+                <DetailTable tableRow={this.props.tableRow}/>
                 <NextButtonGroup/>
             </div>
         );
@@ -51,21 +64,23 @@ var SelectGroup = React.createClass({
 
 var DetailTable = React.createClass({
     render: function() {
+        var tableRowArray = this.props.tableRow.map(function(row) {
+            return (
+                <DetailTableRow key={row.id} time={row.time} type={row.type} detail={row.detail} money={row.money} paid={row.paid}/>
+            );
+        });
         return (
             <table id="transaction_details_table">
-                <tr>
-                    <th className="th">日期</th>
-                    <th className="th">類型</th>
-                    <th className="th">詳情</th>
-                    <th className="th">金額</th>
-                    <th className="th">已付</th>
-                </tr>
-                <DetailTableRow/>
-                <DetailTableRow/>
-                <DetailTableRow/>
-                <DetailTableRow/>
-                <DetailTableRow/>
-                <DetailTableRow/>
+                <tbody>
+                    <tr>
+                        <th className="th">日期</th>
+                        <th className="th">類型</th>
+                        <th className="th">詳情</th>
+                        <th className="th">金額</th>
+                        <th className="th">已付</th>
+                    </tr>
+                    {tableRowArray}
+                </tbody>
             </table>
         );
     }
@@ -75,11 +90,11 @@ var DetailTableRow = React.createClass({
     render: function() {
         return (
             <tr>
-                <td className="td"> 2016年7月17日</td>
-                <td className="td">搶劫</td>
-                <td className="td">一銀盜領案 警方：13名嫌犯已出境</td>
-                <td className="td">80000000</td>
-                <td className="td">80000000</td>
+                <td className="td">{this.props.time}</td>
+                <td className="td">{this.props.type}</td>
+                <td className="td">{this.props.detail}</td>
+                <td className="td">{this.props.money}</td>
+                <td className="td">{this.props.paid}</td>
             </tr>
         );
     }
@@ -101,9 +116,7 @@ var NextButtonGroup = React.createClass({
 });
 
 
-window.addEventListener("load",function name(params) {
-    ReactDOM.render(
-        <DetailContent/>,
-        document.getElementById('transaction_details_content')
-    );
-})
+ReactDOM.render(
+    <DetailContent tableRow={tableRow}/>,
+    document.getElementById('transaction_details_content')
+);

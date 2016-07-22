@@ -3,7 +3,7 @@ var UserMenu = React.createClass({
         return (
             <div>
                 <span className="nav">Po-Wei
-                    <img id="face-pic" src={"http://ventureburn.com/wp-content/themes/HotTopix_Ventureburn/custom_share/img/twitter.png"} alt="大頭貼"/>
+
                     <OptionBox/>
                 </span>
                 <span className="nav">幫助</span>
@@ -33,6 +33,6 @@ var OptionBox = React.createClass({
 });
 
 ReactDOM.render(
-    <UserMenu/>,
+    <UserMenu imageSrc={imageSrc}/>,
     document.getElementById('nav_wrapper')
 );

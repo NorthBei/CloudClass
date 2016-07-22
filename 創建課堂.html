@@ -8,7 +8,8 @@
   <meta charset="utf-8">
   <title>創建課堂</title>
 </head>
-<body id="body">
+<body>
+  <div id="body"><!--React避免直接操作body，因為body內可能還會有plugin在run,造成react大量修改VDOM-->
   <!--<header class="page_section" id="header">
     <img src="pic/Logo-02.png" alt="pic/cloudclass.png" id="logo">
     <span id="page_tag">創建課程</span>
@@ -171,7 +172,7 @@
   <section class="page_section" id="create_class_section">
     <button id="create_class">創建</button>
   </section>-->
-  
+  </div>
 </body>
 <script type="text/babel" src="./js/createClass.js"></script>
 </html>
