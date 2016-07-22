@@ -45,10 +45,10 @@ var Buttons = React.createClass({
         return (
             <div id="buttons">
                 <div id="register_wrapper">
-                <span id="register">註冊</span>
+                    <button id="register">註冊</button>
                 </div>
                 <div id="or">或</div>
-                <div id="facebook_sign_in">使用Facebook進入</div>
+                <button id="facebook_sign_in">使用Facebook進入</button>
             </div>
         );
     }

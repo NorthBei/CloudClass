@@ -17,8 +17,8 @@ var Header = React.createClass({
             <img src={"pic/Logo-02.png"} alt="LOGO" id="logo"/>
             <span id="page_tag">個人資料</span>
             <div id="nav_wrapper">
-                <span className="nav">儲存</span>
-                <span className="nav">取消</span>
+                <button className="nav">儲存</button>
+                <button className="nav">取消</button>
             </div>
         </header>
         );

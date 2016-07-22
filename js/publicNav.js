@@ -2,12 +2,12 @@ var UserMenu = React.createClass({
     render: function() {
         return (
             <div>
-                <span className="nav">登入</span>
-                <span className="nav">註冊</span>
-                <span className="nav">幫助</span>
-                <span className="nav">
+                <button className="nav">登入</button>
+                <button className="nav">註冊</button>
+                <button className="nav">幫助</button>
+                <button className="nav">
                     <span id="beTeacher">成為老師</span>
-                </span>
+                </button>
             </div>
         );
     }

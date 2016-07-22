@@ -217,7 +217,7 @@ var ClassUnitList = React.createClass({
                         <ClassUnit/>
                         <ClassUnit/>
                     </ol>
-                    <div id="add_class_unit">新增</div>
+                    <button id="add_class_unit">新增</button>
                 </section>
             </div>
         );
@@ -241,7 +241,7 @@ var CreatClass = React.createClass({
     render: function() {
         return (
             <section className="page_section" id="create_class_section">
-                <div id="create_class">創建</div>
+                <button id="create_class">創建</button>
             </section>
         );
     }

@@ -1,3 +1,9 @@
+button{
+    font-family: Helvetica,"Hiragino Sans GB","华文细黑","STHeiti","微软雅黑","Microsoft YaHei",SimHei,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    border: 0;
+    outline: none;
+}
+
 #sign_in_section{
     position: fixed;
     top: 0;

@@ -9,6 +9,12 @@ html,body{
     font-family: Helvetica,"Hiragino Sans GB","华文细黑","STHeiti","微软雅黑","Microsoft YaHei",SimHei,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+button{
+    font-family: Helvetica,"Hiragino Sans GB","华文细黑","STHeiti","微软雅黑","Microsoft YaHei",SimHei,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    border: 0;
+    outline: none;
+}
+
 .page_section{
     min-width: 100%;
     box-sizing: border-box;

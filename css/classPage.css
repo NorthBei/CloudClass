@@ -9,6 +9,11 @@ html,body{
     color: #4A4A4A;
     font-family: Helvetica,"Hiragino Sans GB","华文细黑","STHeiti","微软雅黑","Microsoft YaHei",SimHei,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+button{
+    font-family: Helvetica,"Hiragino Sans GB","华文细黑","STHeiti","微软雅黑","Microsoft YaHei",SimHei,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    border: 0;
+    outline: none;
+}
 
 cite{
     font-style: normal;
@@ -293,14 +298,16 @@ cite{
     margin: 0 19px;
     border-radius: 5px;
     cursor: pointer;
+    color: white;
+    font-size: 17px;
 }
 
 #start_learning{
-    background-color:#4A90E2; 
+    background-color:#4A90E2;
 }
 
 #buy{
-    background-color:#FF5A60; 
+    background-color:#FF5A60;
 }
 
 #about_section{
