@@ -36,7 +36,7 @@ var OrangeLine = React.createClass({
 var Content = React.createClass({
     render: function() {
         return (
-            <section class="page_section" id="content_section">
+            <section className="page_section" id="content_section">
                 <UploadPic/>
                 <InputClassName/>
                 <InputAboutClass/>
@@ -101,7 +101,7 @@ var SelectClassTime = React.createClass({
     render: function() {
         return (
             <div className="one_part">
-                <h1 className="part_title">上課時間(課程時數&單一卡片多梯制</h1>
+                <h1 className="part_title">上課時間(課程時數&amp;單一卡片多梯制</h1>
                 <section className="part_content" id="class_time">
                     <div>
                         <select name="year" className="type_select">
