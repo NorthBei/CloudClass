@@ -1,9 +1,11 @@
+var src = {path:"http://ventureburn.com/wp-content/themes/HotTopix_Ventureburn/custom_share/img/twitter.png"};
+
 var UserMenu = React.createClass({
     render: function() {
         return (
             <div>
                 <span className="nav">Po-Wei
-
+                    <img id="face-pic" src={this.props.src.path} alt="大頭貼"/>
                     <OptionBox/>
                 </span>
                 <span className="nav">幫助</span>
@@ -33,6 +35,6 @@ var OptionBox = React.createClass({
 });
 
 ReactDOM.render(
-    <UserMenu imageSrc={imageSrc}/>,
+    <UserMenu src={src} />,
     document.getElementById('nav_wrapper')
 );
