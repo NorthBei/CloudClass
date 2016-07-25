@@ -31,7 +31,7 @@ button{
     cursor: pointer;
 }
 
-.nav{
+/*.nav{
     line-height: 61px;
     font-size: 14px;
     display: block;
@@ -52,7 +52,7 @@ button{
     border-radius: 2px;
     border: 2px solid #4A4A4A;
     padding: 6px 20px;
-}
+}*/
 
 #pic_section{
     background-image: url(../pic/building-joy-planning-plans.jpg);
