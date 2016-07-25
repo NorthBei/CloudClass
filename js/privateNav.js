@@ -4,14 +4,14 @@ var UserMenu = React.createClass({
     render: function() {
         return (
             <div>
-                <span className="nav">Po-Wei
+                <span className="nav home_nav">Po-Wei
                     <img id="face-pic" src={this.props.src.path} alt="大頭貼"/>
                     <OptionBox/>
                 </span>
-                <span className="nav">幫助</span>
-                <span className="nav">訊息</span>
-                <span className="nav">聽課</span>
-                <span className="nav">開課</span>
+                <span className="nav home_nav">幫助</span>
+                <span className="nav home_nav">訊息</span>
+                <span className="nav home_nav">聽課</span>
+                <span className="nav home_nav">開課</span>
             </div>
         );
     }

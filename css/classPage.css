@@ -35,22 +35,7 @@ cite{
     cursor: pointer;
 }
 
-.nav{
-    line-height: 61px;
-    font-size: 14px;
-    display: block;
-    float: right;
-    margin: 0 19px;
-    cursor: pointer;
-}
-
-#nav_wrapper{
-    position: absolute;
-    top:0;
-    right: 0;
-}
-
-#face-pic{
+/*#face-pic{
     height: 30px;
     width: 30px;
     border-radius: 100%;
@@ -95,7 +80,7 @@ cite{
     height: 1px;
     border: 0 solid white;
     margin: 0 20px;
-}
+}*/
 
 #menu_page{
     background-color: #525252;

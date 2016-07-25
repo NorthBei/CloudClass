@@ -1,0 +1,112 @@
+
+/*----------publicNav---------------------*/
+/*.nav{
+    color: #fff;
+    line-height: 61px;
+    font-size: 14px;
+    display: block;
+    float: right;
+    margin: 0 19px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+#nav_wrapper{
+    position: absolute;
+    top:0;
+    right: 0;
+}*/
+
+#beTeacher{
+    font-weight: normal;
+    border-radius: 2px;
+    border: 2px solid #fff;
+    padding: 6px 20px;
+}
+
+
+/*----------privateNav---------------------*/
+/*
+.nav{
+    line-height: 61px;
+    font-size: 15px;
+    display: block;
+    float: right;
+    margin: 0 19px;
+    cursor: pointer;
+}
+
+#nav_wrapper{
+    position: absolute;
+    top:0;
+    right: 0;
+}*/
+
+#face-pic{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    vertical-align: middle;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#personal_option_box{
+    position: absolute;
+    left: 147px;
+    display: none;
+}
+
+#personal_option_wrapper{
+    background-color: white;
+}
+
+#personal_option_triangle{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 14px 14px 14px;
+    border-color: transparent transparent #ffffff transparent;
+    position: relative;
+    left: 206px;
+    top: 1px;
+}
+.personal_option{
+    background-color: white;
+    padding: 20px;
+    line-height: 25px;
+    width: 215px;
+}
+
+.personal_option:hover{
+    padding-left: 26px;
+}
+
+.personal_option_splite_line{
+    background-color: #dcdbdb;
+    height: 1px;
+    border: 0 solid white;
+    margin: 0 20px;
+}
+
+/*----------General---------------------*/
+
+.nav{
+    color: #4A4A4A;
+    line-height: 61px;
+    font-size: 15px;
+    display: block;
+    float: right;
+    margin: 0 19px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+#nav_wrapper{
+    position: absolute;
+    top:0;
+    right: 0;
+}
+
+/*因為首頁的publicNav顏色跟別人不一樣，
+所以把class=home_nav的css寫在homeStyle.css內，而不是這裡*/
