@@ -3,10 +3,13 @@
 <head>
   <link rel="stylesheet" type="text/css" href="lib/jquery-scrollbar/style.css">
   <link rel="stylesheet" type="text/css" href="css/liveVideo.css">
-  <link rel="stylesheet" type="text/css" href="lib/jquery-scrollbar/jquery.scrollbar.css">
-  <script type="text/javascript" src="lib/jquery-scrollbar/prettify/prettify.js"></script>
+  <link rel="stylesheet" type="text/css" href="lib/tinyscrollbar/tinyscrollbar.css">
   <script type="text/javascript" src="jquery/jquery-3.0.0.min.js"></script>
-  <script type="text/javascript" src="lib/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+  <script type="text/javascript" src="lib/tinyscrollbar/jquery.tinyscrollbar.js"></script>
+
+  <script src="./reactJs/react.15.2.1.js"></script>
+  <script src="./reactJs/react-dom.15.2.1.js"></script>
+  <script src="./reactJs/browser.min.js"></script>
   <meta charset="utf-8">
   <title>教師直播</title>
   <script type="text/javascript">          
@@ -15,7 +18,47 @@
       console.log("height"+videoHeight);
       //$('#scroll_area').scrollbar().css("height",videoHeight+"px");
       $("#students").css("height",videoHeight+"px");
+      //videoHeight-=60px;//60px是設定齒輪+padding的高度
+      $("#scrollbar1").css("height",(videoHeight-60)+"px");
+      //$(".overview").clientHeight;
+
+      var $scrollbar  = $('#scrollbar1')
+                ,   $overview   = $scrollbar.find(".overview")
+                ,   loadingData = false
+                ;
+
+                $scrollbar.tinyscrollbar({thumbSize : 60});
+
+                var scrollbarData = $scrollbar.data("plugin_tinyscrollbar")
+
+                $scrollbar.bind("move", function()
+                {
+                    // The threshold will enable us to start loading the text before we reach the end.
+                    //
+                    var threshold       = 0.9
+                    ,   positionCurrent = scrollbarData.contentPosition + scrollbarData.viewportSize
+                    ,   positionEnd     = scrollbarData.contentSize * threshold
+                    ;
+
+                    // Check if have reached the "end" and that we arent allready in the process of loading new data.
+                    //
+                    if(!loadingData && positionCurrent >= positionEnd)
+                    {
+                        loadingData = true;
+
+                        $.getJSON("data.json", function(data)
+                        {
+                            loadingData = false;
+
+                            $overview.append(data.text)
+
+                            scrollbarData.update("relative");
+                        });
+                    }
+                });
+
     },false);
+        
 </script>
 
 </head>
@@ -58,93 +101,146 @@
   <section class="page_section" id="live_video_section">
     <aside id="students">
       <img id="setting_icon" src="pic/setting_icon.png" alt="">
-      <div id="scroll_area" class="scrollbar-dynamic">
-        <div id="scroll_bar"></div>
-        <div class="student_phto_wrapper">
-          <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
-          <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
-          <div class="message_triangle"></div>
-          <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+      <div id="scrollbar1">
+        <div class="scrollbar">
+          <div class="track" >
+            <div class="thumb">
+              <!--<div class="end"></div>-->
+            </div>
+          </div>
         </div>
+        <div class="viewport">
+          <div class="overview">
 
-        <div class="student_phto_wrapper">
-          <img class="student_phto" src="https://c7.staticflickr.com/4/3492/3464131894_00370eb765.jpg" alt="學生大頭貼">
-          <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
-          <div class="message_triangle"></div>
-          <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
-        </div>
+                <!--<div class="student_phto_wrapper">
+                  <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
+                  <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+                  <span className="message_wrapper">
+                    <div class="message_triangle"></div>
+                    <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+                  </span>
+                </div>
 
-        <div class="student_phto_wrapper">
-          <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
-          <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
-          <div class="message_triangle"></div>
-          <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
-        </div>
+                <div class="student_phto_wrapper">
+                  <img class="student_phto" src="https://c7.staticflickr.com/4/3492/3464131894_00370eb765.jpg" alt="學生大頭貼">
+                  <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+                  <span className="message_wrapper">
+                    <div class="message_triangle"></div>
+                    <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+                  </span>
+                </div>
 
-        <div class="student_phto_wrapper">
-          <img class="student_phto" src="https://c7.staticflickr.com/4/3492/3464131894_00370eb765.jpg" alt="學生大頭貼">
-          <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
-          <div class="message_triangle"></div>
-          <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
-        </div>
+                <div class="student_phto_wrapper">
+                  <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
+                  <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+                  <span className="message_wrapper">
+                    <div class="message_triangle"></div>
+                    <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+                  </span>
+                </div>
 
-        <div class="student_phto_wrapper">
-          <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
-          <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
-          <div class="message_triangle"></div>
-          <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
-        </div>
+                <div class="student_phto_wrapper">
+                  <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
+                  <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+                  <span className="message_wrapper">
+                    <div class="message_triangle"></div>
+                    <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+                  </span>
+                </div>
 
-        <div class="student_phto_wrapper">
-          <img class="student_phto" src="https://c7.staticflickr.com/4/3492/3464131894_00370eb765.jpg" alt="學生大頭貼">
-          <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
-          <div class="message_triangle"></div>
-          <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
-        </div>
+                <div class="student_phto_wrapper">
+                  <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
+                  <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+                  <span className="message_wrapper">
+                    <div class="message_triangle"></div>
+                    <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+                  </span>
+                </div>
 
-        <div class="student_phto_wrapper">
-          <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
-          <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
-          <div class="message_triangle"></div>
-          <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
-        </div>
+                <div class="student_phto_wrapper">
+                  <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
+                  <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+                  <span className="message_wrapper">
+                    <div class="message_triangle"></div>
+                    <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+                  </span>
+                </div>
 
-        <div class="student_phto_wrapper">
-          <img class="student_phto" src="https://c7.staticflickr.com/4/3492/3464131894_00370eb765.jpg" alt="學生大頭貼">
-          <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
-          <div class="message_triangle"></div>
-          <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
-        </div>
+                <div class="student_phto_wrapper">
+                  <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
+                  <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+                  <span className="message_wrapper">
+                    <div class="message_triangle"></div>
+                    <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+                  </span>
+                </div>
 
-        <div class="student_phto_wrapper">
-          <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
-          <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
-          <div class="message_triangle"></div>
-          <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
-        </div>
+                <div class="student_phto_wrapper">
+                  <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
+                  <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+                  <span className="message_wrapper">
+                    <div class="message_triangle"></div>
+                    <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+                  </span>
+                </div>
 
-        <div class="student_phto_wrapper">
-          <img class="student_phto" src="https://c7.staticflickr.com/4/3492/3464131894_00370eb765.jpg" alt="學生大頭貼">
-          <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
-          <div class="message_triangle"></div>
-          <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
-        </div>
+                <div class="student_phto_wrapper">
+                  <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
+                  <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+                  <span className="message_wrapper">
+                    <div class="message_triangle"></div>
+                    <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+                  </span>
+                </div>
 
-        <div class="student_phto_wrapper">
-          <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
-          <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
-          <div class="message_triangle"></div>
-          <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
-        </div>
+                <div class="student_phto_wrapper">
+                  <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
+                  <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+                  <span className="message_wrapper">
+                    <div class="message_triangle"></div>
+                    <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+                  </span>
+                </div>
 
-        <div class="student_phto_wrapper">
-          <img class="student_phto" src="https://c7.staticflickr.com/4/3492/3464131894_00370eb765.jpg" alt="學生大頭貼">
-          <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
-          <div class="message_triangle"></div>
-          <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
-        </div>
+                <div class="student_phto_wrapper">
+                  <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
+                  <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+                  <span className="message_wrapper">
+                    <div class="message_triangle"></div>
+                    <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+                  </span>
+                </div>
 
-      </div>
+                <div class="student_phto_wrapper">
+                  <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
+                  <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+                  <span className="message_wrapper">
+                    <div class="message_triangle"></div>
+                    <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+                  </span>
+                </div>
+
+                <div class="student_phto_wrapper">
+                  <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
+                  <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+                  <span className="message_wrapper">
+                    <div class="message_triangle"></div>
+                    <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+                  </span>
+                </div>
+
+                <div class="student_phto_wrapper">
+                  <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
+                  <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+                  <span className="message_wrapper">
+                    <div class="message_triangle"></div>
+                    <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+                  </span>
+                </div>
+
+        </div><!--overview end-->
+      </div><!--viewport end-->
+    </div>
     </aside>
     <div id="teacher_info">
       <img id="teacher_photo" src="pic/example_face_img.png" alt="老師照片">
@@ -218,4 +314,5 @@
     </center>
   </section>
 </body>
+<script type="text/babel" src="./js/students.js"></script>
 </html>

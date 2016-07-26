@@ -177,27 +177,11 @@ html,body{
     cursor: pointer;
 }
 
-#scroll_area{
-    position: relative;
-    z-index: 5;
-}
-
-#scroll_bar{
-    position: absolute;
-    top: 1px;
-    left: 75px;
-    background-color: rgba(108, 110, 113, 0.43);
-    height: 100px;
-    width: 5px;
-    /* border-radius: 9px; */
-    cursor: pointer;
-}
-
 .student_phto_wrapper{
     height: 64px;
     display: flex;
     flex-direction: row;
-    margin: 7px 0px;
+    margin: 10px 0px;
     width: 100vw;
 }
 
@@ -213,27 +197,42 @@ html,body{
     border: 3px solid white;
 }
 
+.student_photo_zoom{
+    transform: scale(1.5);
+    z-index: 21;
+    margin-left: 22px;
+}
+
 .bell{
     position: relative;
-    /*top: 39px;
-    left: -17px;*/
     top: 38px;
     left: -27px;
     height: 20px;
     width: 20px;
 }
 
+.bell_photo_zoom{
+    z-index: 22;
+    top: 47px;
+    left: -19px;
+}
+
+.message_wrapper{
+    display: none;
+}
+
 .message_box{
     background-color: rgba(74, 74, 74, 0.7);
     position: relative;
-    top: 0px;
+    top: -11px;
     left: 22px;
     border-radius: 5px;
     word-break: break-all;
     color: white;
     padding: 17px;
-    display: inline-block;
+    display: block; 
     z-index: 10;
+    max-width: 350px;
 }
 
 .message_triangle{
@@ -244,7 +243,7 @@ html,body{
     border-color: transparent rgba(74, 74, 74, 0.7) transparent transparent;
     position: relative;
     top: 24px;
-    left: 22px;
+    left: 5px;
     z-index: 10;
 }
 #teacher_info{
