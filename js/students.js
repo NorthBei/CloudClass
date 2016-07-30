@@ -1,4 +1,5 @@
 var users = [
+    
     {id:"photo_1",photo:"http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg",msg:"我會好好執政，捍衛太平島主權，台灣爛波萬"},
     {id:"photo_2",photo:"http://imgs.niusnews.com/upload/imgs/default/13AprCh/YagoPartal2013/1.jpg",msg:"有句話說：「人要衣裝，佛要金裝」，現在這句話可不僅能套在人類身上，動物們雖然也有毛皮的保護，但要是認真打扮起來可是一點都不輸給人類！"},
     {id:"photo_3",photo:"http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg",msg:"我會好好執政，捍衛太平島主權，台灣爛波萬"},
@@ -18,11 +19,17 @@ var users = [
     {id:"photo_17",photo:"http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg",msg:"我會好好執政，捍衛太平島主權，台灣爛波萬"},
     {id:"photo_18",photo:"http://imgs.niusnews.com/upload/imgs/default/13AprCh/YagoPartal2013/1.jpg",msg:"有句話說：「人要衣裝，佛要金裝」，現在這句話可不僅能套在人類身上，動物們雖然也有毛皮的保護，但要是認真打扮起來可是一點都不輸給人類！"},
     {id:"photo_19",photo:"http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg",msg:"我會好好執政，捍衛太平島主權，台灣爛波萬"},
-    {id:"photo_20",photo:"http://imgs.niusnews.com/upload/imgs/default/13AprCh/YagoPartal2013/1.jpg",msg:"有句話說：「人要衣裝，佛要金裝」，現在這句話可不僅能套在人類身上，動物們雖然也有毛皮的保護，但要是認真打扮起來可是一點都不輸給人類！"}
+    {id:"photo_20",photo:"http://imgs.niusnews.com/upload/imgs/default/13AprCh/YagoPartal2013/1.jpg",msg:"有句話說：「人要衣裝，佛要金裝」，現在這句話可不僅能套在人類身上，動物們雖然也有毛皮的保護，但要是認真打扮起來可是一點都不輸給人類！"},
+    {id:"photo_21",photo:"https://pbs.twimg.com/profile_images/692923519752101889/NCr54N6z.jpg",msg:"WowWee! CHiP and Miposaur are featured in the April edition of "}
 ];
 
 var Student = React.createClass({
-
+    toFirst:function() {
+        var box = ReactDOM.findDOMNode(this.refs.box);
+        var parent = box.parentNode;
+        var first = parent.firstChild;
+        parent.insertBefore(box, first);
+    },
     toggleBell:function() {
       var bell = this.refs.bell;
 
@@ -80,6 +87,7 @@ var StudentList = React.createClass({
     componentDidMount:function (xxxx) {
 
         //this.getPhotoById("photo_1").toggleBell();
+        this.getPhotoById("photo_21").toFirst();
 
         var videoHeight =  document.getElementById("live_video").clientHeight;
         console.log("height "+videoHeight);
