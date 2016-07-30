@@ -20,7 +20,7 @@ var users = [
     {id:"photo_18",photo:"http://imgs.niusnews.com/upload/imgs/default/13AprCh/YagoPartal2013/1.jpg",msg:"有句話說：「人要衣裝，佛要金裝」，現在這句話可不僅能套在人類身上，動物們雖然也有毛皮的保護，但要是認真打扮起來可是一點都不輸給人類！"},
     {id:"photo_19",photo:"http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg",msg:"我會好好執政，捍衛太平島主權，台灣爛波萬"},
     {id:"photo_20",photo:"http://imgs.niusnews.com/upload/imgs/default/13AprCh/YagoPartal2013/1.jpg",msg:"有句話說：「人要衣裝，佛要金裝」，現在這句話可不僅能套在人類身上，動物們雖然也有毛皮的保護，但要是認真打扮起來可是一點都不輸給人類！"},
-    {id:"photo_21",photo:"https://pbs.twimg.com/profile_images/692923519752101889/NCr54N6z.jpg",msg:"WowWee! CHiP and Miposaur are featured in the April edition of "}
+    {id:"photo_21",photo:"https://pbs.twimg.com/profile_images/692923519752101889/NCr54N6z.jpg",msg:"WowWee! CHiP and Miposaur are featured in the April edition of "},
 ];
 
 var Student = React.createClass({
@@ -87,25 +87,28 @@ var StudentList = React.createClass({
     componentDidMount:function (xxxx) {
 
         //this.getPhotoById("photo_1").toggleBell();
-        this.getPhotoById("photo_21").toFirst();
+        this.getPhotoById("photo_21").toFirst();    
 
-        var videoHeight =  document.getElementById("live_video").clientHeight;
-        console.log("height "+videoHeight);
+        //var videoHeight =  document.getElementById("live_video").clientHeight;
+        //console.log("height "+videoHeight);
         //$("#students").css("height",videoHeight+"px");
         //videoHeight-=60px;//60px是設定齒輪+padding的高度
-        $("#scrollbar1").css("height",(videoHeight-60)+"px");
+        //$("#scrollbar1").css("height",(videoHeight-60)+"px");
 
+        this.initLeftScrollBar();
+
+    },
+    initLeftScrollBar:function() {
         var $scrollbar  = $('#scrollbar1')
-                ,   $overview   = $scrollbar.find(".overview")
-                ,   loadingData = false
-                ;
+                        ,   $overview   = $scrollbar.find(".overview")
+                        ,   loadingData = false
+                        ;
 
         $scrollbar.tinyscrollbar({thumbSize : 60});
 
         var scrollbarData = $scrollbar.data("plugin_tinyscrollbar")
 
-        $scrollbar.bind("move", function()
-        {
+        $scrollbar.bind("move", function(){
             // The threshold will enable us to start loading the text before we reach the end.
             //
             var threshold       = 0.9
@@ -115,12 +118,11 @@ var StudentList = React.createClass({
 
             // Check if have reached the "end" and that we arent allready in the process of loading new data.
             //
-            if(!loadingData && positionCurrent >= positionEnd)
-            {
+            if(!loadingData && positionCurrent >= positionEnd){
+
                 loadingData = true;
 
-                $.getJSON("data.json", function(data)
-                {
+                $.getJSON("data.json", function(data){
                     loadingData = false;
 
                     $overview.append(data.text)
@@ -129,7 +131,6 @@ var StudentList = React.createClass({
                 });
             }
         });
-
     },
     render: function() {
         var users = this.props.users.map(function(user) {

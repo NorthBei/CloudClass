@@ -263,7 +263,7 @@ html,body{
     height: 50px;
     width: 50px;
     align-items: center;
-    padding-right: 20px;
+    margin-right: 20px;
 }
 
 #teacher_name{
@@ -331,12 +331,38 @@ html,body{
     /*跟#buttons_section一樣高*/
 }
 
+#ask_student_question,.student_button{
+    position: relative;
+    top: -80px;
+}
+
+#ask_student_question{
+    position: relative;
+    top: -80px;
+    height: 80px;
+    width: inherit;
+    background-color: rgba(0,0,0,0.5);
+    margin: 0 7px;
+    text-align: center;
+    line-height: 80px;
+    /*line-height equals to hight */
+}
+
+#O{
+    background-color: #4a90e2;
+}
+
+#X{
+    background-color: #e04054;
+}
+
 .feature_button{
     background-color: #4A4A4A;
     line-height: 35px;
     padding: 0 68px;
     margin: 0 7px;
     cursor: pointer;
+    display: inline-block;
 }
 
 #class_content_section{

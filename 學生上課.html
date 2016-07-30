@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="lib/jquery-scrollbar/style.css">
+  <link rel="stylesheet" type="text/css" href="css/liveVideo.css">
+  <link rel="stylesheet" type="text/css" href="lib/tinyscrollbar/tinyscrollbar.css">
+  <script type="text/javascript" src="jquery/jquery-3.0.0.min.js"></script>
+  <script type="text/javascript" src="lib/tinyscrollbar/jquery.tinyscrollbar.js"></script>
+
+  <script src="./reactJs/react.15.2.1.js"></script>
+  <script src="./reactJs/react-dom.15.2.1.js"></script>
+  <script src="./reactJs/browser.min.js"></script>
+  <meta charset="utf-8">
+  <title>學生上課</title>
+  <!--script type="text/javascript">          
+    window.addEventListener("load",function(){
+      var videoHeight =  document.getElementById("live_video").clientHeight;
+      console.log("height "+videoHeight);
+      //$("#students").css("height",videoHeight+"px");
+      //videoHeight-=60px;//60px是設定齒輪+padding的高度
+      $("#scrollbar1").css("height",(videoHeight-60)+"px");
+
+      var $scrollbar  = $('#scrollbar1')
+                ,   $overview   = $scrollbar.find(".overview")
+                ,   loadingData = false
+                ;
+
+                $scrollbar.tinyscrollbar({thumbSize : 60});
+
+                var scrollbarData = $scrollbar.data("plugin_tinyscrollbar")
+
+                $scrollbar.bind("move", function()
+                {
+                    // The threshold will enable us to start loading the text before we reach the end.
+                    //
+                    var threshold       = 0.9
+                    ,   positionCurrent = scrollbarData.contentPosition + scrollbarData.viewportSize
+                    ,   positionEnd     = scrollbarData.contentSize * threshold
+                    ;
+
+                    // Check if have reached the "end" and that we arent allready in the process of loading new data.
+                    //
+                    if(!loadingData && positionCurrent >= positionEnd)
+                    {
+                        loadingData = true;
+
+                        $.getJSON("data.json", function(data)
+                        {
+                            loadingData = false;
+
+                            $overview.append(data.text)
+
+                            scrollbarData.update("relative");
+                        });
+                    }
+                });
+
+    },false);
+        
+</script-->
+
+</head>
+<body>
+  <header class="page_section" id="header">
+    <img src="pic/Logo-02.png" alt="pic/cloudclass.png" id="logo">
+    <center id="live_header">
+      <div id="isLive">
+        <img id="live_icon" src="pic/live_icon.png" alt="直播中">
+        直播中
+      </div>
+      <div id="live_title">I MISS YOU 烏克麗麗 教學 - Vanessa Ding</div>
+      <div id="show_key">顯示金鑰</div>
+    </center>
+    <div id="nav_wrapper">
+      <span class="nav">Po-Wei
+        <img id="face-pic" src="http://ventureburn.com/wp-content/themes/HotTopix_Ventureburn/custom_share/img/twitter.png" alt="大頭貼">
+        <div id="personal_option_box">
+          <div id="personal_option_triangle"></div>
+            <div id="personal_option_wrapper">
+              <div class="personal_option">編輯個人資料</div>
+              <hr class="personal_option_splite_line">
+              <div class="personal_option">回報問題</div>
+              <hr class="personal_option_splite_line">
+              <div class="personal_option">登出</div>
+          </div>
+        </div>
+      </span>
+    </div>
+  </header>
+  <section  class="page_section" id="live_status_page">
+    <div>學生：12 / 27</div>
+    <div id="class_timer">01：20：59</div>    
+    <div>
+      <span class="status_bar_button">結束</span>
+      <span class="status_bar_button">加購QA時間</span>
+    </div>
+  </section>
+
+  <section class="page_section" id="live_video_section">
+    <aside id="students">
+      <img id="setting_icon" src="pic/setting_icon.png" alt="">
+      <div id="scrollbar1">
+        <div class="scrollbar">
+          <div class="track" >
+            <div class="thumb">
+              <!--<div class="end"></div>-->
+            </div>
+          </div>
+        </div>
+        <div class="viewport">
+          <div class="overview">
+
+                <!--<div class="student_phto_wrapper">
+                  <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
+                  <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+                  <span className="message_wrapper">
+                    <div class="message_triangle"></div>
+                    <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+                  </span>
+                </div>
+
+                <div class="student_phto_wrapper">
+                  <img class="student_phto" src="https://c7.staticflickr.com/4/3492/3464131894_00370eb765.jpg" alt="學生大頭貼">
+                  <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+                  <span className="message_wrapper">
+                    <div class="message_triangle"></div>
+                    <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+                  </span>
+                </div>
+
+                <div class="student_phto_wrapper">
+                  <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
+                  <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+                  <span className="message_wrapper">
+                    <div class="message_triangle"></div>
+                    <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+                  </span>
+                </div>
+
+                <div class="student_phto_wrapper">
+                  <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
+                  <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+                  <span className="message_wrapper">
+                    <div class="message_triangle"></div>
+                    <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+                  </span>
+                </div>
+
+                <div class="student_phto_wrapper">
+                  <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
+                  <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+                  <span className="message_wrapper">
+                    <div class="message_triangle"></div>
+                    <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+                  </span>
+                </div>
+
+                <div class="student_phto_wrapper">
+                  <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
+                  <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+                  <span className="message_wrapper">
+                    <div class="message_triangle"></div>
+                    <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+                  </span>
+                </div>
+
+                <div class="student_phto_wrapper">
+                  <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
+                  <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+                  <span className="message_wrapper">
+                    <div class="message_triangle"></div>
+                    <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+                  </span>
+                </div>
+
+                <div class="student_phto_wrapper">
+                  <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
+                  <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+                  <span className="message_wrapper">
+                    <div class="message_triangle"></div>
+                    <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+                  </span>
+                </div>
+
+                <div class="student_phto_wrapper">
+                  <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
+                  <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+                  <span className="message_wrapper">
+                    <div class="message_triangle"></div>
+                    <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+                  </span>
+                </div>
+
+                <div class="student_phto_wrapper">
+                  <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
+                  <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+                  <span className="message_wrapper">
+                    <div class="message_triangle"></div>
+                    <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+                  </span>
+                </div>
+
+                <div class="student_phto_wrapper">
+                  <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
+                  <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+                  <span className="message_wrapper">
+                    <div class="message_triangle"></div>
+                    <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+                  </span>
+                </div>
+
+                <div class="student_phto_wrapper">
+                  <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
+                  <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+                  <span className="message_wrapper">
+                    <div class="message_triangle"></div>
+                    <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+                  </span>
+                </div>
+
+                <div class="student_phto_wrapper">
+                  <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
+                  <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+                  <span className="message_wrapper">
+                    <div class="message_triangle"></div>
+                    <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+                  </span>
+                </div>
+
+                <div class="student_phto_wrapper">
+                  <img class="student_phto" src="http://img.ltn.com.tw/2016/new/jan/4/images/bigPic/400_400/php0lVqQo.jpg" alt="學生大頭貼">
+                  <img class="bell" src="pic/bell.png" alt="鈴鐺圖示">
+                  <span className="message_wrapper">
+                    <div class="message_triangle"></div>
+                    <div class="message_box">我會好好執政，捍衛太平島主權，台灣爛波萬</div>
+                  </span>
+                </div>
+
+        </div><!--overview end-->
+      </div><!--viewport end-->
+    </div>
+    </aside>
+    <div id="teacher_info">
+      <img id="teacher_photo" src="pic/example_face_img.png" alt="老師照片">
+      <div>
+        <div id="teacher_name">Vanessa Ding</div>
+        <span id="info_track">
+            <img id="track_favorite" src="pic/favorite.png" alt="">
+            已追蹤
+          </span>
+      </div>
+    </div>
+    <video id="live_video" src="./video/road.mp4" controls>
+    <div></div>
+    </video>
+  </section>
+  <section class="page_section" id="buttons_section">
+    <div id="ask_teacher">
+      <input id="ask_input" type="text" placeholder="我想請問~">
+      <div id="ask_submit">送出</div>
+    </div>
+    <div>
+      <div id="ask_student_question">B指法學會了嗎?</div>
+      <span class="feature_button student_button" id="O">O</span>
+      <span class="feature_button student_button" id="X">X</span>
+    </div>
+    <div id="buttons">
+      <!--<span class="feature_button">新增詢問</span>-->
+      <span class="feature_button">截圖</span>
+      <span class="feature_button">舉手</span>
+    </div>
+  </section>
+  
+  <section class="page_section" id="class_content_section">
+    <article class="class_content">
+      <h1 class="class_content_title">課程單元</h1>
+      <div class="article_content">
+        <ol class="article_content_list">
+          <li>到底「寫程式」是什麼？（估計 20 分鐘）</li>
+          <li>透過 Command line 操作學習下指令（估計 40 分鐘）</li>
+          <li>我的錢怎麼變成負的？－－電腦中的資料儲存與表示方法（估計 60 分鐘）</li>
+          <li>為什麼我連不上這個網頁－－網路基礎概論（估計 40 分鐘）</li>
+          <li>駭客是怎麼做到的？－－資料庫基礎與系統安全（估計 60 分鐘）</li>
+          <li>怎麼會有這麼多程式語言？－－程式語言基礎與簡介（估計 60 分鐘）</li>
+          <li>不過就是排序，有什麼難的？－－演算法概論（估計 40 分鐘）</li>
+          <li>邁向程式之路－－Scratch 入門教學（估計 60 分鐘）</li>
+        </ol>
+      </div>
+    </article>
+    <article class="class_content">
+      <h1 class="class_content_title">課程詢問</h1>
+      <div class="article_content">
+        <ul class="article_content_list" id="class_ask_question">
+            <li>
+              B指法學會了嗎?
+              <div class="yes_no_num_content">
+                <span class="yes_no_num">12</span>
+                <div class="yes_no_visual"></div>
+                <span class="yes_no_num">5</span>
+              </div>
+            </li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <section class="page_section" id="about_company_section">
+    <div id="about_link_wrapper">
+      <a class="about_link" href="">關於直播教室</a>
+      <a class="about_link" href="">常見問題</a>
+      <a class="about_link" href="">企業合作</a>
+      <a class="about_link" href="">聯絡我們</a>
+      <a class="about_link" href="">Privacy & Terms</a>
+    </div>
+    <center>
+      <div id="copyright">© Copyright by FunHouse, Inc.</div>
+    </center>
+  </section>
+</body>
+<script type="text/babel" src="./js/students.js"></script>
+</html>
