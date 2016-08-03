@@ -1,30 +1,10 @@
 /* Tiny Scrollbar */
-#scrollbar1 {     height: 100%; }
-#scrollbar1 .viewport { width: 500px; height: 100%; overflow: hidden; position: relative; }
-#scrollbar1 .overview { list-style: none; position: absolute; left: 0; top: 0; padding: 0; margin: 0; }
-#scrollbar1 .scrollbar{ 
-    background-color: rgba(108, 110, 113, 0.43);
-    position: relative;
-    width: 5px;
-    position: absolute;
-    left: 75px;
-	z-index: 20;
-}
-#scrollbar1 .track {  
-	background-color: #c3bdbd;
-    height: 100%;
-    width: 5px;
-    position: absolute;
-}
-#scrollbar1 .thumb { 
-    background-color: rgba(74, 74, 74, 0.7);
-    height: 40px;
-    width: 5px;
-    cursor: pointer;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-}
-/*scrollbar1 .thumb .end { background: transparent url(images/bg-scrollbar-thumb-y.png) no-repeat 50% 0; overflow: hidden; height: 5px; width: 25px; }*/
-#scrollbar1 .disable { display: none; }
+.message_box { width: 520px; }
+.message_box .viewport { max-width: 350px; height: 23px; overflow: hidden; position: relative; }
+.message_box .overview { width: initial; list-style: none; position: absolute; left: 0; top: 0; padding: 0; margin: 0; }
+.message_box .scrollbar{ background: transparent url(images/bg-scrollbar-track-y.png) no-repeat 0 0; position: relative; background-position: 0 0; float: right; width: 15px; }
+.message_box .track { background: transparent url(images/bg-scrollbar-trackend-y.png) no-repeat 0 100%; height: 100%; width:13px; position: relative; padding: 0 1px; }
+.message_box .thumb { background: transparent url(images/bg-scrollbar-thumb-y.png) no-repeat 50% 100%; height: 20px; width: 25px; cursor: pointer; overflow: hidden; position: absolute; top: 0; left: -5px; }
+.message_box .thumb .end { background: transparent url(images/bg-scrollbar-thumb-y.png) no-repeat 50% 0; overflow: hidden; height: 5px; width: 25px; }
+.message_box .disable { display: none; }
 .noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }

@@ -1,64 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="lib/jquery-scrollbar/style.css">
   <link rel="stylesheet" type="text/css" href="css/liveVideo.css">
-  <link rel="stylesheet" type="text/css" href="lib/tinyscrollbar/tinyscrollbar.css">
+  <link rel="stylesheet" type="text/css" href="lib/tinyscrollbar/tinyscrollbar.photo_scrollbar.css">
+  <link rel="stylesheet" href="lib/custom_content_scroller/jquery.mCustomScrollbar.css" />
+  
   <script type="text/javascript" src="jquery/jquery-3.0.0.min.js"></script>
-  <script type="text/javascript" src="lib/tinyscrollbar/jquery.tinyscrollbar.js"></script>
+  <script type="text/javascript" src="lib/tinyscrollbar/tinyscrollbar.js"></script>
+  <script type="text/javascript" src="lib/custom_content_scroller/jquery.mCustomScrollbar.concat.min.js"></script>
 
   <script src="./reactJs/react.15.2.1.js"></script>
   <script src="./reactJs/react-dom.15.2.1.js"></script>
   <script src="./reactJs/browser.min.js"></script>
   <meta charset="utf-8">
   <title>教師直播</title>
-  <!--script type="text/javascript">          
-    window.addEventListener("load",function(){
-      var videoHeight =  document.getElementById("live_video").clientHeight;
-      console.log("height "+videoHeight);
-      //$("#students").css("height",videoHeight+"px");
-      //videoHeight-=60px;//60px是設定齒輪+padding的高度
-      $("#scrollbar1").css("height",(videoHeight-60)+"px");
-
-      var $scrollbar  = $('#scrollbar1')
-                ,   $overview   = $scrollbar.find(".overview")
-                ,   loadingData = false
-                ;
-
-                $scrollbar.tinyscrollbar({thumbSize : 60});
-
-                var scrollbarData = $scrollbar.data("plugin_tinyscrollbar")
-
-                $scrollbar.bind("move", function()
-                {
-                    // The threshold will enable us to start loading the text before we reach the end.
-                    //
-                    var threshold       = 0.9
-                    ,   positionCurrent = scrollbarData.contentPosition + scrollbarData.viewportSize
-                    ,   positionEnd     = scrollbarData.contentSize * threshold
-                    ;
-
-                    // Check if have reached the "end" and that we arent allready in the process of loading new data.
-                    //
-                    if(!loadingData && positionCurrent >= positionEnd)
-                    {
-                        loadingData = true;
-
-                        $.getJSON("data.json", function(data)
-                        {
-                            loadingData = false;
-
-                            $overview.append(data.text)
-
-                            scrollbarData.update("relative");
-                        });
-                    }
-                });
-
-    },false);
-        
-</script-->
-
+  
 </head>
 <body>
   <header class="page_section" id="header">
@@ -98,8 +54,23 @@
 
   <section class="page_section" id="live_video_section">
     <aside id="students">
-      <img id="setting_icon" src="pic/setting_icon.png" alt="">
-      <div id="scrollbar1">
+      <div id="setting_box_wrapper">
+        <img id="setting_icon" src="pic/setting_icon.png" alt="">
+        <span id="setting_box_visual">
+          <div id="setting_box_triangle"></div>
+          <div id="setting_box">
+            <div class="setting_title">文字大小</div>
+            <div>
+              <input id="word_size_bar" class="range_bar"  type="range" min="0" max="50" value="25" />
+              <div id="word_size"></div>
+            </div>
+            <div class="setting_title">透明度</div>
+            <input class="range_bar" type="range" min="0" max="50" value="25" />
+          </div>
+        </span>
+        
+      </div>
+      <div id="photo_scrollbar">
         <div class="scrollbar">
           <div class="track" >
             <div class="thumb">
@@ -251,7 +222,6 @@
       </div>
     </div>
     <video id="live_video" src="./video/road.mp4" controls>
-    <div></div>
     </video>
   </section>
   <section class="page_section" id="buttons_section">
